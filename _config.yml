@@ -98,6 +98,50 @@ content:
         title: Inteligencia Artificial
         description: RAG (Retrieval-Augmented Generation), Agentes de IA, IA aplicada a gestión documental, Automatización de procesos.
 
+  - title: Certificaciones y Cursos
+    layout: list
+    content:
+      - layout: left
+        title: Curso de Arquitectura
+        caption: 2024
+      - layout: left
+        title: Curso de Docker y Kubernetes
+        caption: 2024
+      - layout: left
+        title: Profesional Angular
+        caption: 2023
+      - layout: left
+        title: Profesional TypeScrypt
+        caption: 2023
+      - layout: left
+        title: Java Avanzado
+        caption: 2022
+
+  - title: Idiomas
+    layout: list
+    content:
+      - layout: top-middle
+        title: Español
+        description: Nativo
+      - layout: top-middle
+        title: Inglés
+        description: Profesional / Técnico (B2)
+
+  - title: Proyectos Destacados
+    layout: list
+    content:
+      - layout: top-middle
+        title: Sistema de Gestión con IA (RAG)
+        description: Implementación de un motor de búsqueda inteligente para documentos institucionales utilizando modelos de lenguaje y arquitecturas de microservicios.
+      - layout: top-middle
+        title: Modernización de Infraestructura K8s
+        description: Migración de servicios legacy a una arquitectura moderna basada en Kubernetes con observabilidad completa (ELK) y seguridad avanzada (Vault).
+
+  - title: Referencias
+    layout: text
+    content: |
+      Referencias profesionales disponibles a solicitud.
+
 # Footer
 footer_show_references: true
 # references_title: References on request (Override references text)

@@ -179,103 +179,146 @@ header {
   }
 }
 
-// Print Optimization (Final Version)
+// Print Optimization (Final Version - High Spec)
 @media print {
   @page {
-    margin: 1cm 1.5cm;
-    size: A4;
+    margin: 1cm 1.5cm !important;
+    size: A4 !important;
   }
   
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
   body {
     background: white !important;
     color: #000 !important;
-    font-size: 10pt;
-    line-height: 1.4;
+    font-size: 11pt !important;
+    visibility: visible !important;
   }
 
-  // Ensure images (profile photo) show in print
-  img, .profile-image, .about-profile-image {
+  // FORCE IMAGE VISIBILITY
+  img, 
+  canvas, 
+  video, 
+  [style*="background-image"], 
+  .about-profile-image, 
+  .profile-image,
+  header img {
     display: block !important;
-    max-width: 150px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 150px !important;
+    height: auto !important;
+    margin: 0 auto 1.5rem !important;
+    border-radius: 50% !important;
+    page-break-inside: avoid !important;
+  }
+
+  // FORCE ICONS VISIBILITY
+  i, 
+  .fa, 
+  .fas, 
+  .fab, 
+  .far, 
+  .card-icon,
+  [class*="fa-"] {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", FontAwesome !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    -webkit-font-smoothing: antialiased !important;
+    color: #1a365d !important; // Deep blue for icons in print
+    font-size: 12pt !important;
   }
 
   header {
+    background: transparent !important;
     padding: 1rem 0 !important;
-    border-bottom: 2px solid #1a365d !important;
-    text-align: center;
+    border-bottom: 2pt solid #1a365d !important;
+    text-align: center !important;
+    display: block !important;
     
     h1 {
-      font-size: 22pt !important;
+      color: #1a365d !important;
+      font-size: 24pt !important;
       margin-bottom: 5pt !important;
     }
     .title {
+      color: #2b6cb0 !important;
       font-size: 14pt !important;
     }
   }
 
   .content-section {
-    padding: 10pt 0 !important;
-    animation: none !important;
-    page-break-inside: auto;
+    padding: 15pt 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    page-break-inside: auto !important;
 
     h2 {
-      font-size: 12pt !important;
-      margin-bottom: 10pt !important;
-      border-left: 3pt solid #38b2ac !important;
-      padding-left: 8pt !important;
+      font-size: 14pt !important;
+      margin-bottom: 12pt !important;
+      border-left: 4pt solid #38b2ac !important;
+      padding-left: 10pt !important;
       color: #1a365d !important;
+      background: #f8f9fa !important; // Subtle background for headers
     }
 
     .list-content {
-      display: block !important; // Simple list for print to avoid grid overlap/cut
+      display: block !important; // Flatten grid for print
+      width: 100% !important;
     }
   }
 
   .card {
     border: none !important;
     border-bottom: 0.5pt solid #eee !important;
-    padding: 0.5rem 0 !important;
-    margin-bottom: 0 !important;
+    padding: 10pt 0 !important;
+    margin: 0 !important;
     box-shadow: none !important;
-    page-break-inside: avoid;
+    page-break-inside: avoid !important;
+    background: transparent !important;
     display: block !important;
 
     .card-title {
-      font-size: 11pt !important;
-      font-weight: bold;
+      font-size: 12pt !important;
+      color: #000 !important;
+      font-weight: bold !important;
     }
     .card-subtitle {
-      font-weight: 600;
       color: #2b6cb0 !important;
+      font-weight: 600 !important;
+      font-size: 11pt !important;
     }
     .card-caption {
-      font-size: 9pt !important;
-      color: #666 !important;
+      font-size: 10pt !important;
+      color: #4a5568 !important;
+      margin-bottom: 5pt !important;
+    }
+    p, description {
+      font-size: 10pt !important;
+      color: #2d3748 !important;
     }
   }
 
   .skill-list {
     display: flex !important;
     flex-wrap: wrap !important;
+    gap: 5pt !important;
     .skill-tag {
-      border: 1px solid #ccc !important;
-      color: black !important;
-      background: none !important;
-      font-size: 8pt !important;
-      padding: 2pt 6pt !important;
+      border: 0.5pt solid #cbd5e0 !important;
+      color: #2d3748 !important;
+      background: white !important;
+      font-size: 9pt !important;
+      padding: 2pt 8pt !important;
+      border-radius: 4pt !important;
     }
-  }
-
-  // Icons in print
-  .card-icon, i.fas, i.fab {
-    display: inline-block !important;
-    color: #38b2ac !important;
-    font-size: 10pt !important;
-    margin-right: 5pt !important;
   }
 
   .no-print {

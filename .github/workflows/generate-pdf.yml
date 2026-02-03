@@ -1,0 +1,35 @@
+name: Generate PDF CV
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  generate_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build
+
+      - name: Generate PDF
+        uses: sproogen/jekyll-cv-pdf-action@v1
+        with:
+          url: "https://rmquispe.github.io/cv-plantilla/"
+          output: "Rolando_Quispe_CV.pdf"
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: CV-PDF
+          path: Rolando_Quispe_CV.pdf

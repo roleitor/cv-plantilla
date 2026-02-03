@@ -72,31 +72,39 @@ content:
       - layout: left
         title: Ingeniería de Sistemas
         sub_title: Universidad Técnica de Oruro
-        caption:
+        icon: fas fa-university
       - layout: left
         title: Diplomado en Educación Superior
         sub_title: Universidad Mayor de San Andrés
-        caption:
+        icon: fas fa-graduation-cap
       - layout: left
         title: Diplomado en Desarrollo de Aplicaciones con Software Libre
         sub_title: Escuela de Gestión Pública Plurinacional
-        caption:
+        icon: fas fa-code-branch
 
-  - title: Competencias
+  - title: Competencias Técnicas
     layout: list
     content:
       - layout: top-middle
-        title: Gestión y Liderazgo
-        description: Liderazgo técnico, Gestión de equipos TI, Scrum Master, Definición de estándares, Gobernanza tecnológica.
+        title: Liderazgo y Arquitectura
+        icon: fas fa-chess-knight
+        description: Liderazgo técnico, Gestión de equipos TI, Scrum Master, Onion Architecture, Microservicios, Event-Driven.
       - layout: top-middle
-        title: Arquitectura y Backend
-        description: Java (JDK 21), Spring Boot, Quarkus, .NET Core, Go, Microservicios, Onion Architecture, Event-Driven, REST / SOAP.
+        title: Backend (Expertise)
+        icon: fab fa-java
+        description: Java (JDK 21), Spring Boot, Quarkus, .NET Core, Go, REST / SOAP, PostgreSQL, MongoDB.
       - layout: top-middle
-        title: DevOps y Observabilidad
-        description: GitLab CI/CD, Docker, Kubernetes, ELK Stack, HashiCorp Vault, MinIO.
+        title: Cloud & DevOps
+        icon: fas fa-cloud
+        description: Docker, Kubernetes, GitLab CI/CD, Azure, HashiCorp Vault, ELK Stack, MinIO.
       - layout: top-middle
         title: Inteligencia Artificial
-        description: RAG (Retrieval-Augmented Generation), Agentes de IA, IA aplicada a gestión documental, Automatización de procesos.
+        icon: fas fa-brain
+        description: RAG (Retrieval-Augmented Generation), Agentes de IA, LangChain, OpenAI API, Automatización Documental.
+      - layout: top-middle
+        title: Herramientas y Otros
+        icon: fas fa-tools
+        description: JetBrains, VSCode, Postman, Kafka, Redis, Linux, Bash Scripting.
 
   - title: Certificaciones y Cursos
     layout: list
@@ -104,18 +112,23 @@ content:
       - layout: left
         title: Curso de Arquitectura
         caption: 2024
+        icon: fas fa-archway
       - layout: left
         title: Curso de Docker y Kubernetes
         caption: 2024
+        icon: fab fa-docker
       - layout: left
         title: Profesional Angular
         caption: 2023
+        icon: fab fa-angular
       - layout: left
-        title: Profesional TypeScrypt
+        title: Profesional TypeScript
         caption: 2023
+        icon: fab fa-js
       - layout: left
         title: Java Avanzado
         caption: 2022
+        icon: fab fa-java
 
   - title: Idiomas
     layout: list
@@ -123,9 +136,11 @@ content:
       - layout: top-middle
         title: Español
         description: Nativo
+        icon: fas fa-language
       - layout: top-middle
         title: Inglés
         description: Profesional / Técnico (B2)
+        icon: fas fa-globe-americas
 
   - title: Proyectos Destacados
     layout: list

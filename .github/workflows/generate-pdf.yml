@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate_pdf:
+  generate-pdf:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,14 +22,56 @@ jobs:
       - name: Build Jekyll Site
         run: bundle exec jekyll build
 
-      - name: Generate PDF
-        uses: sproogen/jekyll-cv-pdf-action@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          url: "https://rmquispe.github.io/cv-plantilla/"
-          output: "Rolando_Quispe_CV.pdf"
+          node-version: '20'
+
+      - name: Install Playwright
+        run: |
+          npm install playwright
+          npx playwright install chromium --with-deps
+
+      - name: Generate PDF with Playwright
+        run: |
+          # Start a local server for the built site
+          npx http-server _site -p 8080 &
+          SERVER_PID=$!
+          
+          # Wait for server to be ready
+          sleep 5
+          
+          # Capture PDF
+          node -e "
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch();
+            const page = await browser.newPage();
+            await page.goto('http://localhost:8080', { waitUntil: 'networkidle' });
+            // Apply a small delay for animations to finish
+            await page.waitForTimeout(1000);
+            await page.pdf({ 
+              path: 'Rolando_Quispe_CV.pdf', 
+              format: 'A4',
+              printBackground: true,
+              margin: { top: '1cm', right: '1cm', bottom: '1cm', left: '1cm' }
+            });
+            await browser.close();
+          })();"
+          
+          # Kill server
+          kill $SERVER_PID
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
           name: CV-PDF
           path: Rolando_Quispe_CV.pdf
+
+      - name: Commit PDF to Repository (Optional)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Rolando_Quispe_CV.pdf
+          git commit -m "docs: automatic PDF generation [skip ci]" || echo "No changes to commit"
+          git push

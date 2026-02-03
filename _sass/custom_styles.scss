@@ -1,5 +1,6 @@
 // Custom Premium Styles for CV
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
 
 :root {
   --primary-color: #1a365d; // Deep blue
@@ -181,26 +182,103 @@ header {
 // Print Optimization (Final Version)
 @media print {
   @page {
-    margin: 1.5cm;
+    margin: 1cm 1.5cm;
+    size: A4;
   }
+  
   body {
     background: white !important;
-    color: black !important;
+    color: #000 !important;
+    font-size: 10pt;
+    line-height: 1.4;
   }
-  .content-section {
-    padding: 1rem 0;
-    animation: none;
-    .list-content {
-      display: block; // Fallback to list for print to avoid grid cut-offs
+
+  // Ensure images (profile photo) show in print
+  img, .profile-image, .about-profile-image {
+    display: block !important;
+    max-width: 150px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  header {
+    padding: 1rem 0 !important;
+    border-bottom: 2px solid #1a365d !important;
+    text-align: center;
+    
+    h1 {
+      font-size: 22pt !important;
+      margin-bottom: 5pt !important;
+    }
+    .title {
+      font-size: 14pt !important;
     }
   }
-  .card {
-    border: none;
-    border-bottom: 1px solid #eee;
-    padding: 1rem 0;
-    break-inside: avoid;
+
+  .content-section {
+    padding: 10pt 0 !important;
+    animation: none !important;
+    page-break-inside: auto;
+
+    h2 {
+      font-size: 12pt !important;
+      margin-bottom: 10pt !important;
+      border-left: 3pt solid #38b2ac !important;
+      padding-left: 8pt !important;
+      color: #1a365d !important;
+    }
+
+    .list-content {
+      display: block !important; // Simple list for print to avoid grid overlap/cut
+    }
   }
-  .card-icon, .no-print {
-    display: none;
+
+  .card {
+    border: none !important;
+    border-bottom: 0.5pt solid #eee !important;
+    padding: 0.5rem 0 !important;
+    margin-bottom: 0 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    display: block !important;
+
+    .card-title {
+      font-size: 11pt !important;
+      font-weight: bold;
+    }
+    .card-subtitle {
+      font-weight: 600;
+      color: #2b6cb0 !important;
+    }
+    .card-caption {
+      font-size: 9pt !important;
+      color: #666 !important;
+    }
+  }
+
+  .skill-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .skill-tag {
+      border: 1px solid #ccc !important;
+      color: black !important;
+      background: none !important;
+      font-size: 8pt !important;
+      padding: 2pt 6pt !important;
+    }
+  }
+
+  // Icons in print
+  .card-icon, i.fas, i.fab {
+    display: inline-block !important;
+    color: #38b2ac !important;
+    font-size: 10pt !important;
+    margin-right: 5pt !important;
+  }
+
+  .no-print {
+    display: none !important;
   }
 }

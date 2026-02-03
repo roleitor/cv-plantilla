@@ -9,6 +9,7 @@ version: 2
 name: Rolando Moisés Quispe Mendoza
 title: Líder Técnico – Arquitectura de Software e Innovación en IA
 email: rolomen_20@hotmail.com | rolomen2.1.0@gmail.com
+phone: "+591 63100619"
 website: github.com/roleitor
 
 # Dark Mode (true/false/never)
@@ -36,7 +37,7 @@ additional_links:
     url: "#"
 
 # About Section
-# about_title: About Me
+about_title: Acerca de mi
 about_profile_image: images/profile.jpg
 about_content: |
   Ingeniero de Sistemas y Arquitecto de Software con amplia experiencia en liderazgo técnico y gestión de equipos de desarrollo en el sector público. Especializado en diseño de arquitecturas de microservicios, seguridad institucional, CI/CD y plataformas basadas en Kubernetes. He liderado la definición de estándares técnicos y actualmente impulso iniciativas de innovación mediante el uso de Inteligencia Artificial, incluyendo modelos RAG y agentes de IA, orientados a la optimización de procesos y gestión del conocimiento institucional.
@@ -104,7 +105,7 @@ content:
       - layout: top-middle
         title: Herramientas y Otros
         icon: fas fa-tools
-        description: JetBrains, VSCode, Postman, Kafka, Redis, Linux, Bash Scripting.
+        description: Zend, Vscode, Antigravity, OpenCode,OpenClaw, ApiDog, Kafka, Linux (Archlinux), Keycloak, ArgoCD, GitLab, Docker, Kubernetes, HashiCorp Vault, ELK Stack, MinIO, n8n, zulip.
 
   - title: Certificaciones y Cursos
     layout: list
@@ -146,16 +147,46 @@ content:
     layout: list
     content:
       - layout: top-middle
-        title: Sistema de Gestión con IA (RAG)
-        description: Implementación de un motor de búsqueda inteligente para documentos institucionales utilizando modelos de lenguaje y arquitecturas de microservicios.
-      - layout: top-middle
-        title: Modernización de Infraestructura K8s
-        description: Migración de servicios legacy a una arquitectura moderna basada en Kubernetes con observabilidad completa (ELK) y seguridad avanzada (Vault).
+        title: Implementación de RAG con LLM y modelos locales (En proceso)
+        description: >
+          Diseño e implementación de una arquitectura RAG (Retrieval-Augmented Generation)
+          utilizando modelos de lenguaje locales como motor generativo, orientada a consultas
+          de información basadas en documentación técnica y lógica de negocio para el desarrollo
+          de aplicaciones empresariales.
 
-  - title: Referencias
-    layout: text
-    content: |
-      Referencias profesionales disponibles a solicitud.
+      - layout: top-middle
+        title: Modernización de Infraestructura y Arquitectura
+        description: >
+          Migración de servicios legacy hacia una arquitectura moderna basada en Kubernetes,
+          incorporando observabilidad integral mediante ELK Stack y seguridad avanzada con Vault.
+          Implementación de una arquitectura de microservicios con pipelines CI/CD automatizados.
+
+      - layout: top-middle
+        title: Implementación de Arquitectura Onion en .NET Core y Autenticación con Keycloak
+        description: >
+          Implementación de una arquitectura Onion para backend y frontend en .NET Core,
+          aplicando patrones de diseño y tecnologías como Dapper, CQRS, MediatR, Swagger,
+          Razor Pages, Nexus Repository, PostgreSQL y Oracle.
+          Integración de Keycloak para autenticación y autorización en aplicaciones Razor y Angular.
+
+  - title: Referencias Profesionales
+    layout: list
+    content:
+      - layout: left
+        title: Christian Magne
+        sub_title: Entel S.A.
+        caption: 72470038
+        icon: fas fa-user-tie
+      - layout: left
+        title: Fernando Yañez
+        sub_title: Servicio de Impuestos Nacionales
+        caption: 72590163
+        icon: fas fa-user-tie
+      - layout: left
+        title: Carlos Monrroy
+        sub_title: Aduana Nacional
+        caption: 71232055
+        icon: fas fa-user-tie
 
 # Footer
 footer_show_references: true

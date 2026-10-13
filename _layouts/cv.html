@@ -1,0 +1,610 @@
+---
+layout: default
+---
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #3b82f6;
+  --text-color: #1f2937;
+  --light-text: #6b7280;
+  --bg-color: #ffffff;
+  --section-bg: #f9fafb;
+  --border-color: #e5e7eb;
+  --header-radius: 0.5rem;
+  --section-radius: 0.5rem;
+  --section-padding: 2rem;
+  --base-font-size: 18px;
+  --base-font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --heading-font-family: 'Merriweather', serif;
+}
+
+body {
+  font-family: var(--base-font-family);
+  line-height: 1.8;
+  color: var(--text-color);
+  font-size: var(--base-font-size);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cv-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+  color: white !important;
+  padding: 3rem 2rem !important;
+  border-radius: var(--header-radius) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.cv-profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.cv-header-content {
+  flex: 1;
+}
+
+.cv-name {
+  color: white !important;
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+  font-family: var(--heading-font-family, 'Merriweather', serif);
+}
+
+.cv-contact, .cv-contact a {
+  color: white !important;
+}
+
+.cv-affiliation {
+  color: white !important;
+  opacity: 0.95 !important;
+}
+
+.cv-section {
+  background: var(--section-bg) !important;
+  padding: var(--section-padding) !important;
+  border-radius: var(--section-radius) !important;
+  border-left: 4px solid var(--primary-color) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.cv-section-title {
+  color: var(--primary-color) !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 2rem !important;
+  padding-bottom: 0.75rem !important;
+  border-bottom: 3px solid var(--border-color) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cv-section-rule {
+  display: none !important;
+}
+
+.cv-entry-institution {
+  color: var(--text-color) !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.cv-entry-degree {
+  color: var(--accent-color) !important;
+  font-weight: 600 !important;
+  font-size: 1.15rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.cv-entry-location,
+.cv-entry-dates {
+  color: var(--light-text) !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.cv-entry-bullets {
+  margin-top: 1rem !important;
+}
+
+.cv-entry-bullets li {
+  color: var(--text-color) !important;
+  font-size: 1.05rem !important;
+  margin-bottom: 0.75rem !important;
+  padding-left: 1.75rem !important;
+}
+
+.theme-selector {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-selector span {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.theme-selector select {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.print-btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #2563eb;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.print-btn:hover {
+  background: #f9fafb;
+}
+
+@media (max-width: 768px) {
+  .cv-header {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 2rem 1rem !important;
+  }
+
+  .cv-profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cv-name {
+    font-size: 1.75rem !important;
+  }
+
+  .cv-contact {
+    font-size: 0.85rem !important;
+  }
+
+  .cv-section {
+    padding: 1rem !important;
+  }
+
+  .cv-section-title {
+    font-size: 1.25rem !important;
+  }
+
+  .cv-entry-institution {
+    font-size: 1.1rem !important;
+  }
+
+  .theme-selector {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem !important;
+  }
+
+  .theme-selector span {
+    display: none;
+  }
+
+  .theme-selector select {
+    width: 100% !important;
+    font-size: 0.85rem !important;
+  }
+
+  .print-btn {
+    margin-left: 0 !important;
+    margin-top: 0.5rem !important;
+    width: 100% !important;
+  }
+}
+
+@media print {
+  .cv-header {
+    background: var(--print-bg, white) !important;
+    color: var(--print-text, black) !important;
+    box-shadow: none !important;
+    border: 2px solid var(--print-border, black) !important;
+    padding: 2rem !important;
+  }
+
+  .cv-profile-photo {
+    border-color: var(--print-border, black) !important;
+    box-shadow: none !important;
+  }
+
+  .cv-name,
+  .cv-contact,
+  .cv-contact a,
+  .cv-affiliation {
+    color: var(--print-text, black) !important;
+  }
+
+  .cv-section {
+    background: white !important;
+    box-shadow: none !important;
+    border-left: none !important;
+    border-bottom: 2px solid black !important;
+  }
+
+  .cv-section-title {
+    color: black !important;
+    border-bottom-color: black !important;
+  }
+
+  .theme-selector,
+  .print-btn {
+    display: none !important;
+  }
+
+  body {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+}
+</style>
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.cv-header');
+  if (header) {
+    const photoHTML = `<img src="/images/profile.jpg" alt="Rolando Moises Quispe Mendoza" class="cv-profile-photo">`;
+    const themeHTML = `
+      <div class="theme-selector">
+        <span>🎨 Layout:</span>
+        <select id="layout-select" onchange="changeLayout(this.value)">
+          <option value="default">📄 Vertical</option>
+          <option value="classic">📜 Clásico (Simple)</option>
+          <option value="two-column">📊 Dos Columnas</option>
+          <option value="timeline">📅 Línea de Tiempo</option>
+        </select>
+        <span style="margin-left: 1rem;">🎨 Color:</span>
+        <select id="theme-select" onchange="changeTheme(this.value)">
+          <option value="blue">🔵 Azul</option>
+          <option value="green">🟢 Verde</option>
+          <option value="red">🔴 Rojo</option>
+          <option value="purple">🟣 Púrpura</option>
+          <option value="gray">⚫ Gris</option>
+          <option value="dark">🌙 Oscuro</option>
+        </select>
+        <span style="margin-left: 1rem;">🔤 Fuente:</span>
+        <select id="font-select" onchange="changeFont(this.value)">
+          <option value="inter">Inter (Moderna)</option>
+          <option value="roboto">Roboto (Google)</option>
+          <option value="opensans">Open Sans (Profesional)</option>
+          <option value="lato">Lato (Elegante)</option>
+          <option value="montserrat">Montserrat (Creativa)</option>
+        </select>
+        <span style="margin-left: 1rem;">📏 Tamaño:</span>
+        <select id="size-select" onchange="changeSize(this.value)">
+          <option value="14">Pequeño (14px)</option>
+          <option value="16">Normal (16px)</option>
+          <option value="18" selected>Grande (18px)</option>
+          <option value="20">Muy Grande (20px)</option>
+          <option value="22">Extra Grande (22px)</option>
+        </select>
+        <button onclick="window.print()" class="print-btn">🖨️ PDF</button>
+      </div>
+    `;
+    header.insertAdjacentHTML('afterbegin', photoHTML);
+    header.insertAdjacentHTML('beforeend', themeHTML);
+  }
+  
+  // Agregar iconos a los títulos de las secciones
+  const sectionTitles = document.querySelectorAll('.cv-section-title');
+  const icons = {
+    'PERFIL PROFESIONAL': '👤',
+    'EXPERIENCIA PROFESIONAL': '💼',
+    'EDUCACIÓN': '🎓',
+    'CERTIFICACIONES Y CURSOS': '📜',
+    'COMPETENCIAS TÉCNICAS': '⚙️',
+    'IDIOMAS': '🌍',
+    'REFERENCIAS PROFESIONALES': '👥'
+  };
+  
+  sectionTitles.forEach(title => {
+    const text = title.textContent;
+    for (const [key, icon] of Object.entries(icons)) {
+      if (text.includes(key)) {
+        title.textContent = icon + ' ' + text;
+        break;
+      }
+    }
+  });
+
+  window.changeLayout = function(layout) {
+    if (layout === 'default') {
+      window.location.href = '/';
+    } else if (layout === 'classic') {
+      window.location.href = '/cv-classic.html';
+    } else if (layout === 'two-column') {
+      window.location.href = '/cv-two-column.html';
+    } else if (layout === 'timeline') {
+      window.location.href = '/cv-timeline.html';
+    }
+  };
+
+  window.changeFont = function(font) {
+    const fonts = {
+      inter: "'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      roboto: "'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      opensans: "'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      lato: "'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      montserrat: "'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+    };
+    document.documentElement.style.setProperty('--base-font-family', fonts[font] || fonts.inter);
+  };
+
+  window.changeSize = function(size) {
+    document.documentElement.style.setProperty('--base-font-size', size + 'px');
+  };
+
+  window.changeTheme = function(theme) {
+    const themes = {
+      blue: {
+        primary: '#2563eb',
+        secondary: '#1e40af',
+        accent: '#3b82f6',
+        text: '#1f2937',
+        lightText: '#6b7280',
+        sectionBg: '#f9fafb',
+        borderColor: '#e5e7eb',
+        headerRadius: '0.5rem',
+        sectionRadius: '0.5rem',
+        printBg: 'white',
+        printText: 'black',
+        printBorder: '#2563eb'
+      },
+      green: {
+        primary: '#059669',
+        secondary: '#047857',
+        accent: '#10b981',
+        text: '#1f2937',
+        lightText: '#6b7280',
+        sectionBg: '#f0fdf4',
+        borderColor: '#bbf7d0',
+        headerRadius: '0.5rem',
+        sectionRadius: '0.5rem',
+        printBg: 'white',
+        printText: 'black',
+        printBorder: '#059669'
+      },
+      red: {
+        primary: '#dc2626',
+        secondary: '#b91c1c',
+        accent: '#ef4444',
+        text: '#1f2937',
+        lightText: '#6b7280',
+        sectionBg: '#fef2f2',
+        borderColor: '#fecaca',
+        headerRadius: '0.5rem',
+        sectionRadius: '0.5rem',
+        printBg: 'white',
+        printText: 'black',
+        printBorder: '#dc2626'
+      },
+      purple: {
+        primary: '#7c3aed',
+        secondary: '#6d28d9',
+        accent: '#8b5cf6',
+        text: '#1f2937',
+        lightText: '#6b7280',
+        sectionBg: '#faf5ff',
+        borderColor: '#e9d5ff',
+        headerRadius: '0.5rem',
+        sectionRadius: '0.5rem',
+        printBg: 'white',
+        printText: 'black',
+        printBorder: '#7c3aed'
+      },
+      gray: {
+        primary: '#374151',
+        secondary: '#1f2937',
+        accent: '#4b5563',
+        text: '#1f2937',
+        lightText: '#6b7280',
+        sectionBg: '#f3f4f6',
+        borderColor: '#d1d5db',
+        headerRadius: '0.5rem',
+        sectionRadius: '0.5rem',
+        printBg: 'white',
+        printText: 'black',
+        printBorder: '#374151'
+      },
+      dark: {
+        primary: '#3b82f6',
+        secondary: '#2563eb',
+        accent: '#60a5fa',
+        text: '#f9fafb',
+        lightText: '#9ca3af',
+        sectionBg: '#1f2937',
+        borderColor: '#374151',
+        headerRadius: '0.5rem',
+        sectionRadius: '0.5rem',
+        printBg: 'white',
+        printText: 'black',
+        printBorder: '#3b82f6'
+      },
+      modern: {
+        primary: '#0891b2',
+        secondary: '#0e7490',
+        accent: '#06b6d4',
+        text: '#1f2937',
+        lightText: '#6b7280',
+        sectionBg: '#ecfeff',
+        borderColor: '#a5f3fc',
+        headerRadius: '1rem',
+        sectionRadius: '1rem',
+        printBg: 'white',
+        printText: 'black',
+        printBorder: '#0891b2'
+      },
+      classic: {
+        primary: '#1e3a8a',
+        secondary: '#1e40af',
+        accent: '#3b82f6',
+        text: '#1f2937',
+        lightText: '#6b7280',
+        sectionBg: '#ffffff',
+        borderColor: '#94a3b8',
+        headerRadius: '0',
+        sectionRadius: '0',
+        printBg: 'white',
+        printText: 'black',
+        printBorder: '#1e3a8a'
+      }
+    };
+    
+    const selected = themes[theme] || themes.blue;
+    document.documentElement.style.setProperty('--primary-color', selected.primary);
+    document.documentElement.style.setProperty('--secondary-color', selected.secondary);
+    document.documentElement.style.setProperty('--accent-color', selected.accent);
+    document.documentElement.style.setProperty('--text-color', selected.text);
+    document.documentElement.style.setProperty('--light-text', selected.lightText);
+    document.documentElement.style.setProperty('--section-bg', selected.sectionBg);
+    document.documentElement.style.setProperty('--border-color', selected.borderColor);
+    document.documentElement.style.setProperty('--header-radius', selected.headerRadius);
+    document.documentElement.style.setProperty('--section-radius', selected.sectionRadius);
+    document.documentElement.style.setProperty('--print-bg', selected.printBg);
+    document.documentElement.style.setProperty('--print-text', selected.printText);
+    document.documentElement.style.setProperty('--print-border', selected.printBorder);
+  };
+});
+</script>
+
+<article class="cv">
+    <header class="cv-header">
+        <div class="cv-header-content">
+            <h1 class="cv-name">{{ site.title }}</h1>
+            {% if site.email %}
+            <div class="cv-contact"><a href="mailto:{{ site.email }}" data-ym-goal="email_click">📧 {{ site.email }}</a></div>
+            {% endif %}
+            {% if site.address %}
+            <div class="cv-contact">📍 {{ site.address }}</div>
+            {% endif %}
+            {% if site.phone %}
+            <div class="cv-contact"><a href="tel:{{ site.phone }}" data-ym-goal="phone_click">📞 {{ site.phone }}</a></div>
+            {% endif %}
+            {% if site.website %}
+            <div class="cv-contact"><a href="{{ site.website }}" data-ym-goal="website_click">🌐 {{ site.website }}</a></div>
+            {% endif %}
+            <div class="cv-socials" style="margin-top:0.5em;">
+                {% if site.linkedin %}
+                <a class="cv-social-icon" href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener"
+                    title="LinkedIn" data-ym-goal="linkedin_click">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                {% endif %}
+                {% if site.github.size > 0 %}
+                <a class="cv-social-icon" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener" title="GitHub"
+                    data-ym-goal="github_click">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
+                    </svg>
+                </a>
+                {% endif %}
+                {% if site.twitter %}
+                <a class="cv-social-icon" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener" title="Twitter"
+                    data-ym-goal="twitter_click">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139 9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.08-4.03 3.199-4.03.943 0 1.797.398 2.395 1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z" />
+                    </svg>
+                </a>
+                {% endif %}
+                {% if site.telegram %}
+                <a class="cv-social-icon" href="https://t.me/{{ site.telegram }}" target="_blank" rel="noopener" title="Telegram"
+                    data-ym-goal="telegram_click">
+                    <svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                        <path id="telegram-3"
+                            d="M19,24l-14,0c-2.761,0 -5,-2.239 -5,-5l0,-14c0,-2.761 2.239,-5 5,-5l14,0c2.762,0 5,2.239 5,5l0,14c0,2.761 -2.238,5 -5,5Zm-2.744,-5.148c0.215,0.153 0.491,0.191 0.738,0.097c0.246,-0.093 0.428,-0.304 0.483,-0.56c0.579,-2.722 1.985,-9.614 2.512,-12.09c0.039,-0.187 -0.027,-0.381 -0.173,-0.506c-0.147,-0.124 -0.351,-0.16 -0.532,-0.093c-2.795,1.034 -11.404,4.264 -14.923,5.567c-0.223,0.082 -0.368,0.297 -0.361,0.533c0.008,0.235 0.167,0.44 0.395,0.509c1.578,0.471 3.65,1.128 3.65,1.128c0,0 0.967,2.924 1.472,4.41c0.063,0.187 0.21,0.334 0.402,0.384c0.193,0.05 0.397,-0.002 0.541,-0.138c0.811,-0.765 2.064,-1.948 2.064,-1.948c0,0 2.381,1.746 3.732,2.707Zm-7.34,-5.784l1.119,3.692l0.249,-2.338c0,0 4.324,-3.9 6.79,-6.124c0.072,-0.065 0.082,-0.174 0.022,-0.251c-0.06,-0.077 -0.169,-0.095 -0.251,-0.043c-2.857,1.825 -7.929,5.064 -7.929,5.064Z" />
+                    </svg>
+                </a>
+                {% endif %}
+                {% if site.leetcode %}
+                <a class="cv-social-icon" href="https://leetcode.com/u/{{ site.leetcode }}" target="_blank" rel="noopener" title="LeetCode"
+                    data-ym-goal="leetcode_click">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+                    </svg>
+                </a>
+                {% endif %}
+            </div>
+            <div class="cv-socials-print">
+                {% if site.linkedin %}
+                <a href="https://linkedin.com/in/{{ site.linkedin }}">LinkedIn: https://linkedin.com/in/{{ site.linkedin
+                    }}</a>
+                {% endif %}
+                {% if site.github.size > 0 %}
+                <a href="https://github.com/{{ site.github }}">GitHub: https://github.com/{{ site.github }}</a>
+                {% endif %}
+                {% if site.twitter %}
+                <a href="https://twitter.com/{{ site.twitter }}">Twitter: https://twitter.com/{{ site.twitter }}</a>
+                {% endif %}
+                {% if site.telegram %}
+                <a href="https://t.me/{{ site.telegram }}">Telegram: https://t.me/{{ site.telegram }}</a>
+                {% endif %}
+                {% if site.leetcode %}
+                <a href="https://leetcode.com/u/{{ site.leetcode }}">LeetCode: https://leetcode.com/u/{{ site.leetcode }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    {% for section in site.data.cv.sections %}
+    <section class="cv-section">
+        <h2 class="cv-section-title">{{ section.title | upcase }}</h2>
+        <hr class="cv-section-rule" />
+        {% for e in section.entries %}
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <div class="cv-entry-main">
+                    <span class="cv-entry-institution">{{ e.title }}</span>{% if e.sub %}<span class="cv-entry-degree">,
+                        <em>{{ e.sub }}</em></span>{% endif %}
+                </div>
+                <div class="cv-entry-meta">
+                    {% if e.location %}<span class="cv-entry-location">{{ e.location }}</span>{% endif %}
+                    {% if e.dates %}<span class="cv-entry-dates">{{ e.dates }}</span>{% endif %}
+                </div>
+            </div>
+            {% if e.bullets %}
+            <ul class="cv-entry-bullets">
+                {% for b in e.bullets %}
+                <li>{{ b | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endfor %}
+</article>

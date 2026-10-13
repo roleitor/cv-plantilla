@@ -1,0 +1,80 @@
+/* Personalización visual del CV Harvard-Style */
+
+/* Mejorar colores y contraste */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #3b82f6;
+  --text-color: #1f2937;
+  --light-text: #6b7280;
+  --bg-color: #ffffff;
+  --section-bg: #f9fafb;
+  --border-color: #e5e7eb;
+}
+
+/* Mejorar tipografía */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Agregar foto de perfil al encabezado */
+.header-wrapper {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.header-content .department,
+.header-content .affiliation {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+  }
+}

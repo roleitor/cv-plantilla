@@ -1,0 +1,403 @@
+---
+layout: default
+---
+
+<style>
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #3b82f6;
+  --text-color: #1f2937;
+  --light-text: #6b7280;
+  --sidebar-bg: #1f2937;
+  --sidebar-text: #f9fafb;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.cv-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.cv-sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  height: fit-content;
+}
+
+.sidebar-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.sidebar-name {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-title {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.sidebar-contact a {
+  color: var(--sidebar-text);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.sidebar-contact a:hover {
+  opacity: 0.8;
+}
+
+.sidebar-skills li {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.cv-main {
+  padding: 0;
+}
+
+.main-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.main-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.main-section h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.entry {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.entry h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.entry .sub {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.entry .location,
+.entry .dates {
+  font-size: 0.9rem;
+  color: var(--light-text);
+  margin-bottom: 0.5rem;
+}
+
+.entry ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.entry li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.entry li:before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.theme-selector {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 0.375rem;
+}
+
+.theme-selector span {
+  color: white;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.theme-selector select {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.print-btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: var(--primary-color);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .cv-sidebar {
+    padding: 1.5rem;
+  }
+  
+  .sidebar-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .sidebar-name {
+    font-size: 1.25rem;
+  }
+  
+  .sidebar-title {
+    font-size: 0.85rem;
+  }
+  
+  .main-header {
+    padding: 1.5rem;
+  }
+  
+  .main-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .main-section {
+    padding: 1rem;
+  }
+  
+  .main-section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .entry h3 {
+    font-size: 1.1rem;
+  }
+  
+  .theme-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .theme-selector select {
+    width: 100%;
+  }
+  
+  .print-btn {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}
+
+@media print {
+  .cv-container {
+    display: block;
+  }
+  
+  .cv-sidebar {
+    background: white;
+    color: black;
+    border: 2px solid black;
+    page-break-after: always;
+  }
+  
+  .sidebar-photo {
+    border-color: black;
+  }
+  
+  .cv-main {
+    page-break-before: always;
+  }
+  
+  .theme-selector,
+  .print-btn {
+    display: none;
+  }
+}
+</style>
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  const themeHTML = `
+    <div class="theme-selector">
+      <span>🎨 Layout:</span>
+      <select id="layout-select" onchange="changeLayout(this.value)">
+        <option value="default">📄 Vertical</option>
+        <option value="classic">📜 Clásico (Simple)</option>
+        <option value="two-column" selected>📊 Dos Columnas</option>
+        <option value="timeline">📅 Línea de Tiempo</option>
+      </select>
+      <button onclick="window.print()" class="print-btn">🖨️ PDF</button>
+    </div>
+  `;
+  
+  const sidebar = document.querySelector('.cv-sidebar');
+  if (sidebar) {
+    sidebar.insertAdjacentHTML('afterbegin', themeHTML);
+  }
+  
+  window.changeLayout = function(layout) {
+    if (layout === 'default') {
+      window.location.href = '/';
+    } else if (layout === 'classic') {
+      window.location.href = '/cv-classic.html';
+    } else if (layout === 'two-column') {
+      window.location.href = '/cv-two-column.html';
+    } else if (layout === 'timeline') {
+      window.location.href = '/cv-timeline.html';
+    }
+  };
+});
+</script>
+
+<div class="cv-container">
+  <aside class="cv-sidebar">
+    <img src="/images/profile.jpg" alt="Rolando Moises Quispe Mendoza" class="sidebar-photo">
+    <h2 class="sidebar-name">{{ site.title }}</h2>
+    <p class="sidebar-title">{{ site.department }}</p>
+    <p class="sidebar-title" style="font-size: 0.85rem; opacity: 0.8;">{{ site.affiliation }}</p>
+    
+    <div class="sidebar-section">
+      <h3>Contacto</h3>
+      <div class="sidebar-contact">
+        <a href="mailto:{{ site.email }}">📧 {{ site.email }}</a>
+        <a href="tel:{{ site.phone }}">📞 {{ site.phone }}</a>
+        <a href="https://linkedin.com/in/{{ site.linkedin }}">💼 LinkedIn</a>
+        <a href="https://github.com/{{ site.github }}">🐙 GitHub</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-section">
+      <h3>Competencias</h3>
+      <ul class="sidebar-skills" style="list-style: none; padding: 0;">
+        {% for section in site.data.cv.sections %}
+          {% if section.title contains "Competencias" %}
+            {% for entry in section.entries %}
+              <li><strong>{{ entry.title }}:</strong></li>
+              {% for bullet in entry.bullets %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <div class="sidebar-section">
+      <h3>Idiomas</h3>
+      <ul class="sidebar-skills" style="list-style: none; padding: 0;">
+        {% for section in site.data.cv.sections %}
+          {% if section.title contains "Idiomas" %}
+            {% for entry in section.entries %}
+              <li><strong>{{ entry.title }}:</strong> {{ entry.bullets | join: ', ' }}</li>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+  
+  <main class="cv-main">
+    <div class="main-header">
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.affiliation }}</p>
+    </div>
+    
+    {% for section in site.data.cv.sections %}
+      {% unless section.title contains "Competencias" or section.title contains "Idiomas" %}
+      <section class="main-section">
+        <h2>{{ section.title }}</h2>
+        {% for e in section.entries %}
+        <div class="entry">
+          <h3>{{ e.title }}</h3>
+          {% if e.sub %}<p class="sub">{{ e.sub }}</p>{% endif %}
+          {% if e.location %}<p class="location">{{ e.location }}</p>{% endif %}
+          {% if e.dates %}<p class="dates">{{ e.dates }}</p>{% endif %}
+          {% if e.bullets %}
+          <ul>
+            {% for b in e.bullets %}
+            <li>{{ b | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </section>
+      {% endunless %}
+    {% endfor %}
+  </main>
+</div>

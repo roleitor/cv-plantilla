@@ -1,0 +1,18 @@
+current directory: /home/rolomen/Documents/Proyectos/Personal/Github/cv-plantilla/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/rolomen/Documents/Proyectos/Personal/Github/cv-plantilla/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20261012-19632-lk9cln sitelibdir\=./.gem.20261012-19632-lk9cln clean
+
+current directory: /home/rolomen/Documents/Proyectos/Personal/Github/cv-plantilla/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20261012-19632-lk9cln sitelibdir\=./.gem.20261012-19632-lk9cln
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/rolomen/Documents/Proyectos/Personal/Github/cv-plantilla/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20261012-19632-lk9cln sitelibdir\=./.gem.20261012-19632-lk9cln install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20261012-19632-lk9cln/racc
+
+current directory: /home/rolomen/Documents/Proyectos/Personal/Github/cv-plantilla/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20261012-19632-lk9cln sitelibdir\=./.gem.20261012-19632-lk9cln clean

@@ -1,200 +1,44 @@
-# Site
-repository: roleitor/cv-plantilla
-favicon: images/favicon.ico
+# Site Configuration for Harvard-Style CV Theme
+remote_theme: smirnoffmg/harvard-style-cv-theme
 
-# Content configuration version
-version: 2
-
-# Personal info
-name: Rolando Moisés Quispe Mendoza
-title: Líder Técnico – Arquitectura de Software e Innovación en IA
-email: rolomen_20@hotmail.com | rolomen2.1.0@gmail.com
+# Basic Information
+title: "Rolando Moises Quispe Mendoza"
+email: "rolomen_20@hotmail.com"
 phone: "+591 63100619"
-website: github.com/roleitor
+address: "La Paz - Bolivia"
+website: "github.com/roleitor"
 
-# Dark Mode (true/false/never)
-darkmode: false
-
-# Social links
-twitter_username:
-github_username: roleitor
-# stackoverflow_username: "00000001"
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-instagram_username:
-linkedin_username: rolomen
-# xing_username: jekyll
-# pinterest_username: jekyll
-youtube_username:
-# googleplus_username: +jekyll
-# orcid_username: 0000-0000-0000-0000
-
-# Additional icon links
-additional_links:
-  - title: Bolsa de Trabajo
-    icon: fas fa-briefcase
-    url: "#"
-
-# About Section
-about_title: Acerca de mi
+# Profile Image (Harvard-Style theme uses about_profile_image)
 about_profile_image: images/profile.jpg
-about_content: |
-  Ingeniero de Sistemas y Arquitecto de Software con amplia experiencia en liderazgo técnico y gestión de equipos de desarrollo en el sector público. Especializado en diseño de arquitecturas de microservicios, seguridad institucional, CI/CD y plataformas basadas en Kubernetes. He liderado la definición de estándares técnicos y actualmente impulso iniciativas de innovación mediante el uso de Inteligencia Artificial, incluyendo modelos RAG y agentes de IA, orientados a la optimización de procesos y gestión del conocimiento institucional.
 
-content:
-  - title: Experiencia Profesional
-    layout: list
-    content:
-      - layout: left
-        title: Aduana Nacional
-        sub_title: Supervisor de Desarrollo de Sistemas
-        caption: Junio 2023 – Actual
-        description: |
-          Liderazgo de equipos TI en proyectos de desarrollo de software institucional. Definición de una nueva arquitectura tecnológica basada en Kubernetes, Onion Architecture y enfoque Event-Driven. Integración de plataformas transversales como Vault, ELK Stack y MinIO. Evaluación e incorporación de IA (RAG) para gestión documental.
+# Social Media (just usernames, not full URLs)
+linkedin: rolomen
+github: roleitor
+twitter:
+telegram:
+leetcode:
 
-      - layout: left
-        title: Servicio de Impuestos Nacionales
-        sub_title: Profesional F
-        caption: Febrero 2020 – Mayo 2023
-        description: |
-          Diseño e implementación de microservicios con Java y .NET Core. Implementacion de autenticación y autorización con Keycloak. Implementacion arquitectura onion en net Core. Coordinación de equipos bajo Scrum.
+# Optional: Google Analytics
+# google_analytics: G-XXXXXXXXXX
 
-      - layout: left
-        title: ENTEL S.A.
-        sub_title: Consultor Técnico TIC
-        caption: Agosto 2016 – Julio 2018
-        description: |
-          Supervisión de instalación y funcionamiento de radio bases y telecentros satelitales. Prospección técnica y soporte preventivo y correctivo. Gestión y seguimiento técnico de proyectos.
+# Optional: Yandex.Metrika
+# yandex_metrika: 12345678
 
-  - title: Educación
-    layout: list
-    content:
-      - layout: left
-        title: Ingeniería de Sistemas
-        sub_title: Universidad Técnica de Oruro
-        icon: fas fa-university
-      - layout: left
-        title: Diplomado en Educación Superior
-        sub_title: Universidad Mayor de San Andrés
-        icon: fas fa-graduation-cap
-      - layout: left
-        title: Diplomado en Desarrollo de Aplicaciones con Software Libre
-        sub_title: Escuela de Gestión Pública Plurinacional
-        icon: fas fa-code-branch
+# Site Settings
+description: "CV Profesional - Rolando Moises Quispe Mendoza • Arquitecto de Software & Líder Técnico"
+baseurl: ""
+url: "https://roleitor.github.io/cv-plantilla"
 
-  - title: Competencias Técnicas
-    layout: list
-    content:
-      - layout: top-middle
-        title: Liderazgo y Arquitectura
-        icon: fas fa-chess-knight
-        description: Liderazgo técnico, Gestión de equipos TI, Scrum Master, Onion Architecture, Microservicios, Event-Driven.
-      - layout: top-middle
-        title: Backend (Expertise)
-        icon: fab fa-java
-        description: Java (JDK 21), Spring Boot, Quarkus, .NET Core, Go, REST / SOAP, PostgreSQL, MongoDB.
-      - layout: top-middle
-        title: Cloud & DevOps
-        icon: fas fa-cloud
-        description: Docker, Kubernetes, GitLab CI/CD, Azure, HashiCorp Vault, ELK Stack, MinIO.
-      - layout: top-middle
-        title: Inteligencia Artificial
-        icon: fas fa-brain
-        description: RAG (Retrieval-Augmented Generation), Agentes de IA, LangChain, OpenAI API, Automatización Documental.
-      - layout: top-middle
-        title: Herramientas y Otros
-        icon: fas fa-tools
-        description: Zend, Vscode, Antigravity, OpenCode,OpenClaw, ApiDog, Kafka, Linux (Archlinux), Keycloak, ArgoCD, GitLab, Docker, Kubernetes, HashiCorp Vault, ELK Stack, MinIO, n8n, zulip.
-
-  - title: Certificaciones y Cursos
-    layout: list
-    content:
-      - layout: left
-        title: Curso de Arquitectura
-        caption: 2024
-        icon: fas fa-archway
-      - layout: left
-        title: Curso de Docker y Kubernetes
-        caption: 2024
-        icon: fab fa-docker
-      - layout: left
-        title: Profesional Angular
-        caption: 2023
-        icon: fab fa-angular
-      - layout: left
-        title: Profesional TypeScript
-        caption: 2023
-        icon: fab fa-js
-      - layout: left
-        title: Java Avanzado
-        caption: 2022
-        icon: fab fa-java
-
-  - title: Idiomas
-    layout: list
-    content:
-      - layout: top-middle
-        title: Español
-        description: Nativo
-        icon: fas fa-language
-      - layout: top-middle
-        title: Inglés
-        description: Profesional / Técnico (B2)
-        icon: fas fa-globe-americas
-
-  - title: Proyectos Destacados
-    layout: list
-    content:
-      - layout: top-middle
-        title: Implementación de RAG con LLM y modelos locales (En proceso)
-        description: >
-          Diseño e implementación de una arquitectura RAG (Retrieval-Augmented Generation)
-          utilizando modelos de lenguaje locales como motor generativo, orientada a consultas
-          de información basadas en documentación técnica y lógica de negocio para el desarrollo
-          de aplicaciones empresariales.
-
-      - layout: top-middle
-        title: Modernización de Infraestructura y Arquitectura
-        description: >
-          Migración de servicios legacy hacia una arquitectura moderna basada en Kubernetes,
-          incorporando observabilidad integral mediante ELK Stack y seguridad avanzada con Vault.
-          Implementación de una arquitectura de microservicios con pipelines CI/CD automatizados.
-
-      - layout: top-middle
-        title: Implementación de Arquitectura Onion en .NET Core y Autenticación con Keycloak
-        description: >
-          Implementación de una arquitectura Onion para backend y frontend en .NET Core,
-          aplicando patrones de diseño y tecnologías como Dapper, CQRS, MediatR, Swagger,
-          Razor Pages, Nexus Repository, PostgreSQL y Oracle.
-          Integración de Keycloak para autenticación y autorización en aplicaciones Razor y Angular.
-
-  - title: Referencias Profesionales
-    layout: list
-    content:
-      - layout: left
-        title: Christian Magne
-        sub_title: Entel S.A.
-        caption: 72470038
-        icon: fas fa-user-tie
-      - layout: left
-        title: Fernando Yañez
-        sub_title: Servicio de Impuestos Nacionales
-        caption: 72590163
-        icon: fas fa-user-tie
-      - layout: left
-        title: Carlos Monrroy
-        sub_title: Aduana Nacional
-        caption: 71232055
-        icon: fas fa-user-tie
-
-# Footer
-footer_show_references: true
-# references_title: References on request (Override references text)
+# CV Version Selection
+# Cambia este valor para cambiar la versión del CV:
+# cv.yml = Versión completa (Full Stack)
+# cv_arquitectura.yml = Arquitectura y Liderazgo
+# cv_angular_backend.yml = Angular y Backend
+# cv_institucionpublica.yml = Institución Pública
+cv_version: cv.yml
 
 # Build settings
-remote_theme: sproogen/resume-theme
-
+markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed

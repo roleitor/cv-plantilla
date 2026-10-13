@@ -1,0 +1,363 @@
+sections:
+  # PERFIL PROFESIONAL
+  - title: Perfil Profesional
+    entries:
+      - title: "Arquitecto de Software y Líder Técnico"
+        bullets:
+          - "Ingeniero de Sistemas con amplia experiencia en liderazgo técnico y gestión de equipos de desarrollo en el sector público"
+          - "Especializado en diseño de arquitecturas de microservicios, seguridad institucional, CI/CD y plataformas basadas en Kubernetes"
+          - "Liderazgo en la definición de estándares técnicos y promotor de iniciativas de innovación mediante Inteligencia Artificial"
+          - "Experiencia con modelos RAG y agentes de IA orientados a optimización de procesos y gestión del conocimiento institucional"
+          - "Me gusta innovar y crear sistemas con las mejores prácticas, en constante aprendizaje con las últimas tendencias tecnológicas"
+
+  # EXPERIENCIA PROFESIONAL - ACTUAL
+  - title: Experiencia Profesional
+    entries:
+      - title: "Aduana Nacional"
+        sub: "Supervisor de Desarrollo de Sistemas"
+        location: "Bolivia"
+        dates: "Junio 2023 – Actual"
+        bullets:
+          - "Liderazgo de equipos TI en proyectos de desarrollo de software institucional"
+          - "Definición de una nueva arquitectura tecnológica basada en Kubernetes, Onion Architecture y enfoque Event-Driven"
+          - "Integración de plataformas transversales: Vault (gestión de secretos), ELK Stack (observabilidad) y MinIO (almacenamiento de objetos)"
+          - "Evaluación e incorporación de Inteligencia Artificial (RAG) para gestión documental y apoyo a procesos internos"
+          - "Gestión de gobernanza tecnológica y definición de estándares de desarrollo"
+          - "[LOGRO A COMPLETAR] Mejora de métricas específicas (ej: reducción de tiempo de deployment en X%, ahorro de recursos en Y%)"
+
+      - title: "Servicio de Impuestos Nacionales"
+        sub: "Profesional F - Scrum Master"
+        location: "Zona Sur, Los Pinos, Av. José Aguirre entre calle 25 y calle 5"
+        dates: "Marzo 2022 – Mayo 2023"
+        bullets:
+          - "Rol como Scrum Master liderando equipos de desarrollo"
+          - "Implementación de microservicios con Java y arquitectura Onion"
+          - "Integración de autenticación y autorización con Keycloak para backend Java y frontend Angular"
+          - "Creación de proyectos con Angular 14"
+          - "Uso del stack ELK para centralización de logs y monitoreo"
+          - "Integración con CI/CD pipelines en GitLab"
+          - "Integración de APIDOC, SonarQube y métricas de calidad"
+          - "[LOGRO A COMPLETAR] Implementación exitosa de X microservicios"
+
+      - title: "Servicio de Impuestos Nacionales"
+        sub: "Profesional J - Scrum Master"
+        location: "Zona Sur, Los Pinos, Av. José Aguirre entre calle 25 y calle 5"
+        dates: "Abril 2021 – Marzo 2022"
+        bullets:
+          - "Rol como Scrum Master en equipos de desarrollo"
+          - "Implementación del SIAT en línea - Declaraciones Juradas"
+          - "Creación de la arquitectura de .NET Core para Web API"
+          - "Integración de Vault y logs con ELK en .NET Core"
+          - "Creación de proyectos de frontend con Razor Pages"
+          - "Creación de librerías reutilizables para Java y .NET Core"
+          - "[LOGRO A COMPLETAR] Optimización de X procesos del SIAT"
+
+      - title: "Servicio de Impuestos Nacionales"
+        sub: "Consultor Profesional I"
+        location: "Zona Sur, Los Pinos, Av. José Aguirre entre calle 25 y calle 5"
+        dates: "Junio 2020 – Diciembre 2020"
+        bullets:
+          - "Desarrollo de sistemas de información full stack"
+          - "Desarrollo del sistema de facturación electrónica virtual"
+          - "Desarrollo de servicios back-end REST/SOAP"
+          - "Desarrollo de interfaces front-end con JSF y Angular"
+          - "Desarrollo de aplicaciones de escritorio con JavaFX"
+          - "[LOGRO A COMPLETAR] Contribución en X módulos del sistema"
+
+      - title: "Servicio de Impuestos Nacionales"
+        sub: "Consultor Profesional J"
+        location: "Zona Sur, Los Pinos, Av. José Aguirre entre calle 25 y calle 5"
+        dates: "Febrero 2020 – Junio 2020"
+        bullets:
+          - "Desarrollar el sistema de facturación electrónica SIAT, programación full stack"
+          - "Aplicaciones de escritorio con JavaFX"
+          - "Servicios web SOAP/REST"
+          - "Desarrollo con JSF y Angular"
+          - "[LOGRO A COMPLETAR] Desarrollo de X componentes del SIAT"
+
+      - title: "Servicio de Impuestos Nacionales"
+        sub: "Consultor Técnico I"
+        location: "Zona Sur, Los Pinos, Av. José Aguirre entre calle 25 y calle 5"
+        dates: "Marzo 2019 – Diciembre 2019"
+        bullets:
+          - "Analizar, desarrollar y realizar pruebas en los sistemas asignados"
+          - "Módulo Estados Financieros"
+          - "Módulo Facturación Electrónica"
+          - "Módulo Hoteles"
+          - "Módulo Agentes de Información"
+          - "[LOGRO A COMPLETAR] Testing y desarrollo de X módulos"
+
+      - title: "ENTEL S.A."
+        sub: "Consultor Técnico IRB"
+        location: "Oruro, Calle Bolívar entre Calle Pagador, Edificio ENTEL"
+        dates: "Agosto 2017 – Julio 2018"
+        bullets:
+          - "Realizar prospecciones técnicas de nuevas radio bases"
+          - "Supervisar la instalación y funcionamiento de radio bases"
+          - "Elaborar la base de datos de seguimiento del proyecto"
+          - "[LOGRO A COMPLETAR] Supervisión de X instalaciones exitosas"
+
+      - title: "ENTEL S.A."
+        sub: "Consultor Técnico TIC"
+        location: "Oruro, Calle Bolívar entre Calle Pagador, Edificio ENTEL"
+        dates: "Agosto 2016 – Febrero 2017"
+        bullets:
+          - "Supervisar la instalación de telecentros satelitales y radio bases"
+          - "Efectuar el soporte preventivo y correctivo de los telecentros satelitales"
+          - "Realizar la prospección técnica de radio bases"
+          - "[LOGRO A COMPLETAR] Cobertura de X regiones con telecentros"
+
+  # EDUCACIÓN
+  - title: Educación
+    entries:
+      - title: "Diplomado en Educación Superior"
+        sub: "Universidad Mayor de San Andrés"
+        location: "Bolivia"
+        dates: "Febrero 2022 – Julio 2022"
+        bullets:
+          - "Formación en pedagogía y educación superior"
+
+      - title: "Diplomado en Desarrollo de Aplicaciones con Software Libre"
+        sub: "Escuela de Gestión Pública Plurinacional (EGGP)"
+        location: "Bolivia"
+        dates: "Agosto 2019 – Diciembre 2019"
+        bullets:
+          - "Desarrollo con tecnologías de software libre"
+
+      - title: "Ingeniería de Sistemas"
+        sub: "Facultad Nacional de Ingeniería"
+        location: "Universidad Técnica de Oruro"
+        dates: "Enero 2005 – Julio 2012"
+        bullets:
+          - "[OPCIONAL] Tesis: [Título de tesis si aplica]"
+
+      - title: "Bachiller en Humanidades"
+        sub: "Colegio Venezuela C"
+        location: ""
+        dates: "Febrero 2000 – Noviembre 2004"
+        bullets:
+          - "Educación secundaria"
+
+  # SKILLS TÉCNICOS
+  - title: Competencias Técnicas
+    entries:
+      - title: "Lenguajes de Programación"
+        bullets:
+          - "Java (JDK 11-17), C#, Go"
+          - "JavaScript, TypeScript"
+          - "HTML, CSS3"
+          - "Kotlin (Curso Profesional)"
+
+      - title: "Frameworks y Tecnologías Backend"
+        bullets:
+          - "Spring Boot, Quarkus, Javalin, Spark"
+          - ".NET Core / .NET 6+"
+          - "Sql2o, Dapper"
+          - "Hibernate, Entity Framework"
+
+      - title: "Frameworks Frontend"
+        bullets:
+          - "Angular 14+"
+          - "JSF (JavaServer Faces)"
+          - "Razor Pages (.NET)"
+          - "JavaFX (aplicaciones de escritorio)"
+
+      - title: "Bases de Datos"
+        bullets:
+          - "PostgreSQL"
+          - "MongoDB"
+          - "Oracle"
+
+      - title: "Arquitectura y Patrones"
+        bullets:
+          - "Microservicios"
+          - "Onion Architecture"
+          - "Event-Driven Architecture"
+          - "REST / SOAP APIs"
+
+      - title: "DevOps y CI/CD"
+        bullets:
+          - "GitLab CI/CD"
+          - "Git, GitLab"
+          - "Docker, Kubernetes"
+          - "Vault (gestión de secretos)"
+
+      - title: "Observabilidad y Monitoreo"
+        bullets:
+          - "ELK Stack (Elasticsearch, Logstash, Kibana)"
+          - "SonarQube (calidad de código)"
+          - "APIDOC (documentación de APIs)"
+          - "JMeter (testing de rendimiento)"
+
+      - title: "Seguridad e Identidad"
+        bullets:
+          - "Keycloak (OAuth2 / OpenID Connect)"
+          - "Autenticación y autorización"
+
+      - title: "Herramientas de Desarrollo"
+        bullets:
+          - "Pentaho (ETL)"
+          - "Node.js (API development)"
+
+  # CERTIFICACIONES Y CURSOS
+  - title: Certificaciones y Cursos
+    entries:
+      - title: "Profesional Angular"
+        sub: "Código Facilito"
+        dates: "Abril 2023"
+        bullets:
+          - "Curso profesional de 5 horas"
+          - "Desarrollo de aplicaciones con Angular"
+
+      - title: "Profesional TypeScript"
+        sub: "Código Facilito"
+        dates: "Abril 2023"
+        bullets:
+          - "Curso profesional de 3 horas"
+          - "TypeScript avanzado para desarrollo web"
+
+      - title: "Go Programming"
+        sub: "SoloLearn"
+        dates: "Enero 2023"
+        bullets:
+          - "Curso de 5 horas"
+          - "Desarrollo con lenguaje Go"
+
+      - title: "C# Programming"
+        sub: "SoloLearn"
+        dates: "Enero 2023"
+        bullets:
+          - "Curso de 5 horas"
+          - "Desarrollo con C# y .NET"
+
+      - title: "Java Avanzado"
+        sub: "IQuattro"
+        dates: "Noviembre 2022 – Diciembre 2022"
+        bullets:
+          - "Curso de 30 horas"
+          - "Java avanzado y patrones de diseño"
+
+      - title: "Curso Profesional de Kotlin"
+        sub: "Código Facilito"
+        dates: "Mayo 2022"
+        bullets:
+          - "Curso profesional de 2 horas"
+          - "Desarrollo con Kotlin"
+
+      - title: "HTML"
+        sub: "SoloLearn"
+        dates: "Julio 2020"
+        bullets:
+          - "Curso de 4 horas"
+          - "HTML5 y desarrollo web"
+
+      - title: "Angular + NestJS"
+        sub: "SoloLearn"
+        dates: "Febrero 2021"
+        bullets:
+          - "Curso de 3 horas"
+          - "Full stack con Angular y NestJS"
+
+      - title: "JavaScript"
+        sub: "SoloLearn"
+        dates: "Febrero 2021"
+        bullets:
+          - "Curso de 5 horas"
+          - "JavaScript moderno"
+
+      - title: "Java"
+        sub: "SoloLearn"
+        dates: "Febrero 2021"
+        bullets:
+          - "Curso de 5 horas"
+          - "Fundamentos de Java"
+
+      - title: "Aprendiendo a hacer API con Node.js"
+        sub: "Udemy"
+        dates: "Octubre 2020"
+        bullets:
+          - "Curso de 5 horas"
+          - "Desarrollo de APIs REST con Node.js"
+
+      - title: "Introducción a Java desde Cero"
+        sub: "Udemy"
+        dates: "Marzo 2020"
+        bullets:
+          - "Curso de 2.5 horas"
+          - "Fundamentos de programación con Java"
+
+      - title: "Curso JavaFX - Aplicaciones de Escritorio Modernas"
+        sub: "Udemy"
+        dates: "Marzo 2020"
+        bullets:
+          - "Curso de 1.5 horas"
+          - "Desarrollo de aplicaciones de escritorio con JavaFX"
+
+      - title: "JMeter - Step by Step for Beginners"
+        sub: "Udemy"
+        dates: "Marzo 2020"
+        bullets:
+          - "Curso de 8 horas"
+          - "Testing de rendimiento con JMeter"
+
+  # IDIOMAS
+  - title: Idiomas
+    entries:
+      - title: "Español"
+        bullets:
+          - "Nativo"
+
+      - title: "Inglés"
+        bullets:
+          - "Profesional / Técnico (B2)"
+          - "Lectura de documentación técnica"
+          - "Comunicación en entornos de trabajo"
+
+  # SOFT SKILLS
+  - title: Soft Skills
+    entries:
+      - title: "Liderazgo"
+        bullets:
+          - "Liderazgo técnico y de equipos"
+          - "Scrum Master"
+          - "Toma de decisiones estratégicas"
+          - "Resolución de conflictos"
+
+      - title: "Comunicación"
+        bullets:
+          - "Comunicación técnica efectiva"
+          - "Presentación a stakeholders"
+          - "Documentación clara"
+
+      - title: "Aprendizaje Continuo"
+        bullets:
+          - "Constante actualización tecnológica"
+          - "Auto-didacta"
+          - "Innovación y mejora continua"
+
+  # REFERENCIAS PROFESIONALES
+  - title: Referencias Profesionales
+    entries:
+      - title: "Ignacio Mendoza"
+        sub: "ENTEL S.A."
+        dates: "72550080"
+        bullets:
+          - "Contacto disponible para referencias"
+
+      - title: "Christian Magne"
+        sub: "ENTEL S.A."
+        dates: "72470038"
+        bullets:
+          - "Contacto disponible para referencias"
+
+      - title: "Luis Landaeta"
+        sub: "Servicio de Impuestos Nacionales"
+        dates: "75271537"
+        bullets:
+          - "Contacto disponible para referencias"
+
+      - title: "Cristina Gutierrez"
+        sub: "Servicio de Impuestos Nacionales"
+        dates: "71918110"
+        bullets:
+          - "Contacto disponible para referencias"

@@ -1,96 +1,120 @@
-# Rolando Moisés Quispe Mendoza
-**Jefe / Líder Técnico – Arquitectura de Software e Innovación en IA**
+# CV Profesional - Rolando Moises Quispe Mendoza
 
-📍 Bolivia  
-📧 rolomen_20@hotmail.com  
-📞 63100619  
+**Líder Técnico – Arquitecto de Software e Innovación en IA**
 
----
+Este repositorio contiene mi CV profesional utilizando el tema [Harvard-Style Jekyll CV Theme](https://github.com/smirnoffmg/harvard-style-cv-theme) para GitHub Pages con estilos personalizados.
 
-## PERFIL PROFESIONAL
-Ingeniero de Sistemas y Arquitecto de Software con amplia experiencia en liderazgo técnico y gestión de equipos de desarrollo en el sector público. Especializado en diseño de arquitecturas de microservicios, seguridad institucional, CI/CD y plataformas basadas en Kubernetes. He liderado la definición de estándares técnicos y actualmente impulso iniciativas de innovación mediante el uso de Inteligencia Artificial, incluyendo modelos RAG y agentes de IA, orientados a la optimización de procesos y gestión del conocimiento institucional.
+## 🎯 Sistema de Múltiples Versiones del CV
 
----
+Este proyecto tiene **4 versiones del CV** adaptadas a diferentes perfiles de trabajo:
 
-## EXPERIENCIA PROFESIONAL
+### Versiones Disponibles
 
-### **Aduana Nacional**
-**Supervisor de Desarrollo de Sistemas**  
-_Junio 2023 – Actual_
+1. **🎯 CV Completo (Full Stack)** - `cv_fullstack.yml`
+   - Versión completa con toda tu experiencia, habilidades y certificaciones
+   - Ideal para mostrar tu perfil completo
 
-- Liderazgo de equipos TI en proyectos de desarrollo de software institucional.
-- Definición de una nueva arquitectura tecnológica basada en Kubernetes, Onion Architecture y enfoque Event-Driven.
-- Integración de plataformas transversales: Vault (gestión de secretos), ELK Stack (observabilidad) y MinIO (almacenamiento de objetos).
-- Evaluación e incorporación de Inteligencia Artificial (RAG) para gestión documental y apoyo a procesos internos.
+2. **🏗️ CV Arquitectura y Liderazgo** - `cv_arquitectura.yml`
+   - Enfocado en arquitectura de software, Kubernetes, microservicios, DevOps y liderazgo técnico
+   - Ideal para puestos de: Arquitecto de Software, Tech Lead, Engineering Manager
 
----
+3. **💻 CV Angular y Backend** - `cv_angular_backend.yml`
+   - Enfocado en desarrollo con Angular, Java, .NET Core, TypeScript y desarrollo full stack
+   - Ideal para puestos de: Desarrollador Full Stack, Angular Developer, Backend Developer
 
-### **Servicio de Impuestos Nacionales**
-**Arquitecto de Software / Scrum Master**  
-_Febrero 2020 – Mayo 2023_
+4. **🏛️ CV Institución Pública** - `cv_institucionpublica.yml`
+   - Enfocado para instituciones públicas (SIN, Aduana, etc.)
+   - Incluye cursos de formación pública (CENCAP, EGGP)
+   - Ideal para presentaciones en el sector público
 
-- Lideré el diseño e implementación de arquitecturas de microservicios con Java y Spring Boot.
-- Definición de estándares de seguridad institucional mediante Keycloak (OAuth2 / OpenID Connect).
-- Implementación de pipelines CI/CD en GitLab, integrando control de calidad con SonarQube.
-- Integración del stack ELK para centralización de logs y monitoreo.
-- Coordinación de equipos bajo metodología Scrum.
+## 🔄 Cómo Cambiar Entre Versiones
 
----
+### Usar el Script Automático (Recomendado)
 
-### **ENTEL S.A.**
-**Consultor Técnico TIC**  
-_Agosto 2016 – Julio 2018_
+```bash
+./cambiar-version.sh [version]
+```
 
-- Supervisión de instalación y funcionamiento de radio bases y telecentros satelitales.
-- Prospección técnica y soporte preventivo y correctivo.
-- Gestión y seguimiento técnico de proyectos.
+**Ejemplos:**
+```bash
+./cambiar-version.sh fullstack           # CV completo
+./cambiar-version.sh arquitectura        # Arquitectura y Liderazgo
+./cambiar-version.sh angular_backend     # Angular y Backend
+./cambiar-version.sh institucion_publica # Institución Pública
+```
 
----
+## 🚀 Vista Previa
 
-## COMPETENCIAS
+El CV está desplegado en: [https://roleitor.github.io/cv-plantilla](https://roleitor.github.io/cv-plantilla)
 
-### **Gestión y Liderazgo**
-- Liderazgo técnico
-- Gestión de equipos TI
-- Scrum Master
-- Definición de estándares
-- Gobernanza tecnológica
+## 📝 Estructura del Proyecto
 
-### **Arquitectura y Backend**
-- Java (JDK 11–17), Spring Boot, Quarkus
-- .NET Core, Go
-- Microservicios
-- Onion Architecture
-- Event-Driven Architecture
-- REST / SOAP
+- **`_data/cv.yml`**: Archivo ACTIVO - El CV que se muestra actualmente
+- **`_data/cv_fullstack.yml`**: Versión completa del CV
+- **`_data/cv_arquitectura.yml`**: Versión enfocada en arquitectura y liderazgo
+- **`_data/cv_angular_backend.yml`**: Versión enfocada en Angular y backend
+- **`_data/cv_institucionpublica.yml`**: Versión para instituciones públicas
+- **`_config.yml`**: Configuración del sitio (información personal, redes sociales)
+- **`cambiar-version.sh`**: Script para cambiar entre versiones
+- **`index.md`**: Página principal (muestra el CV desde cv.yml)
+- **`_sass/custom_styles.scss`**: Estilos personalizados para mejorar visualmente el CV
 
-### **DevOps y Observabilidad**
-- GitLab CI/CD
-- Docker, Kubernetes
-- ELK Stack
-- HashiCorp Vault
-- MinIO
+## 🛠️ Tecnologías
 
-### **Inteligencia Artificial**
-- RAG (Retrieval-Augmented Generation)
-- Agentes de IA
-- IA aplicada a gestión documental
-- Automatización de procesos
+- Jekyll (Ruby)
+- Harvard-Style CV Theme (con personalización CSS)
+- GitHub Pages
 
----
+## 📦 Instalación Local
 
-## EDUCACIÓN
+```bash
+# Configurar PATH para Bundler
+export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 
-**Ingeniería de Sistemas**  
-Universidad Técnica de Oruro  
+# Instalar dependencias
+bundle install
 
-**Diplomado en Educación Superior**  
-Universidad Mayor de San Andrés  
+# Servir localmente
+bundle exec jekyll serve
+```
 
-**Diplomado en Desarrollo de Aplicaciones con Software Libre**  
-Escuela de Gestión Pública Plurinacional  
+Luego abre `http://localhost:4000` en tu navegador.
 
----
+## 📄 Secciones del CV (Ordenadas)
 
-## REFERENCIAS
-Disponibles a solicitud
+1. Perfil Profesional
+2. Experiencia Profesional
+3. Educación
+4. Certificaciones y Cursos (ordenadas por fecha)
+5. Competencias Técnicas (organizadas por categorías)
+6. Idiomas
+7. Referencias Profesionales
+
+## 🎨 Mejoras Visuales
+
+El CV incluye:
+- Diseño profesional con gradiente azul en el encabezado
+- Tarjetas con sombras sutiles para mejor legibilidad
+- Colores coordinados para mejor contraste
+- Diseño responsive para móviles
+- Optimizado para impresión en PDF
+
+## 🔄 Actualización
+
+Para actualizar el CV, edita los archivos correspondientes a cada versión:
+- `_data/cv_fullstack.yml` para versión completa
+- `_data/cv_arquitectura.yml` para arquitectura
+- `_data/cv_angular_backend.yml` para Angular/backend
+- `_data/cv_institucionpublica.yml` para instituciones públicas
+
+Luego aplica los cambios ejecutando `./cambiar-version.sh [version]`.
+
+Las instrucciones detalladas están en `INSTRUCCIONES.md` y `GUIA-EDICION.md`.
+
+## 📧 Contacto
+
+- 📧 rolomen_20@hotmail.com
+- 📞 +591 63100619
+- 📍 Bolivia
+- 💼 [LinkedIn](https://linkedin.com/in/rolomen)
+- 🐙 [GitHub](https://github.com/roleitor)

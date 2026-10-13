@@ -1,0 +1,145 @@
+<div class="header-wrapper">
+  <img src="/images/profile.jpg" alt="Rolando Moises Quispe Mendoza" class="profile-photo">
+  <div class="header-content">
+    <h1>Rolando Moises Quispe Mendoza</h1>
+    <p class="department">Arquitectura de Software e Innovación en IA</p>
+    <p class="affiliation">Líder Técnico - Supervisor de Desarrollo de Sistemas</p>
+    <div class="contact-info">
+      <a href="mailto:rolomen_20@hotmail.com">
+        📧 rolomen_20@hotmail.com
+      </a>
+      <a href="tel:+59163100619">
+        📞 +591 63100619
+      </a>
+      <a href="https://linkedin.com/in/rolomen">
+        💼 LinkedIn
+      </a>
+      <a href="https://github.com/roleitor">
+        🐙 GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+.header-wrapper {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.header-content .department,
+.header-content .affiliation {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.contact-info a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .header-wrapper {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: 2px solid black !important;
+  }
+
+  .profile-photo {
+    border-color: black !important;
+    box-shadow: none !important;
+  }
+
+  .header-content h1,
+  .header-content .department,
+  .header-content .affiliation {
+    color: black !important;
+  }
+
+  .contact-info a {
+    color: black !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const headerHTML = document.querySelector('.header-wrapper');
+  if (!headerHTML) {
+    const header = document.querySelector('header') || document.querySelector('h1');
+    if (header) {
+      header.insertAdjacentHTML('beforebegin', document.querySelector('.header-wrapper').outerHTML);
+    }
+  }
+});
+</script>

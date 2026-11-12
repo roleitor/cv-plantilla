@@ -1,0 +1,53 @@
+---
+// ============================================================================
+// Timeline Layout - timeline/index.astro
+// ============================================================================
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import SkillsGrid from '../../components/SkillsGrid.astro';
+import { siteConfig } from '../../data/site';
+import { generateCV } from '../../data/merge';
+import { resolveCVVersion } from '../../data/version';
+import { CV_VERSIONS, type CVVersion } from '../../types/cv';
+
+export interface Props {
+  version?: CVVersion;
+}
+
+const { version = resolveCVVersion() } = Astro.props;
+const cvData = generateCV(version);
+
+const pageTitle = `${siteConfig.title} • ${CV_VERSIONS[version].label} • Línea de Tiempo`;
+const pageDescription = siteConfig.description;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} layoutClass="layout-timeline">
+  <div class="cv-container layout-timeline">
+    <Header site={siteConfig} layout="timeline" />
+
+    {cvData.sections
+      .filter(s => !s.title.toLowerCase().includes('competencias') && !s.title.toLowerCase().includes('idiomas'))
+      .map(section => (
+        <section class="timeline-section">
+          <h2>{section.title}</h2>
+          <div class="timeline">
+            {section.entries.map(entry => (
+              <div class="timeline-item">
+                <h3>{entry.title}</h3>
+                {entry.sub && <p class="sub">{entry.sub}</p>}
+                {entry.dates && <p class="dates">{entry.dates}</p>}
+                {entry.bullets && entry.bullets.length > 0 && (
+                  <ul>
+                    {entry.bullets.map(bullet => <li>{bullet}</li>)}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+
+    <SkillsGrid cvData={cvData} />
+  </div>
+</BaseLayout>

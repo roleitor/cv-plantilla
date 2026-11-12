@@ -1,93 +1,55 @@
 sections:
-  # PERFIL PROFESIONAL - ENFOCADO EN DESARROLLO
+  # PERFIL PROFESIONAL - ENFOCADO EN ARQUITECTURA
   - title: Perfil Profesional
     entries:
-      - title: "Desarrollador Full Stack y Arquitecto de Software"
+      - title: "Arquitecto de Software y Líder Técnico"
         bullets:
-          - "Ingeniero de Sistemas con experiencia en desarrollo full stack y arquitectura de software"
-          - "Especializado en desarrollo con Angular, Java, .NET Core y TypeScript"
-          - "Experiencia en implementación de microservicios, APIs REST/SOAP y aplicaciones de escritorio"
-          - "Conocimientos en arquitectura Onion, CI/CD, testing y calidad de código"
+          - "Ingeniero de Sistemas con sólida experiencia en arquitectura de software y liderazgo técnico en el sector público"
+          - "Especializado en diseño de arquitecturas de microservicios, Kubernetes, Onion Architecture y patrones Event-Driven"
+          - "Liderazgo en definición de estándares técnicos, gobernanza tecnológica y modernización de infraestructura"
+          - "Experiencia en implementación de plataformas CI/CD, observabilidad (ELK Stack) y gestión de secretos (Vault)"
+          - "Promotor de innovación mediante Inteligencia Artificial, modelos RAG y agentes de IA"
           - "Me gusta innovar y crear sistemas con las mejores prácticas, en constante aprendizaje con las últimas tendencias tecnológicas"
 
-  # EXPERIENCIA PROFESIONAL - ENFOCADA EN DESARROLLO
+  # EXPERIENCIA PROFESIONAL - ENFOCADA EN ARQUITECTURA
   - title: Experiencia Profesional
     entries:
       - title: "Aduana Nacional"
-        sub: "Supervisor de Desarrollo"
+        sub: "Supervisor de Desarrollo de Sistemas"
         location: "Bolivia"
-        dates: "Junio 2023 – Octubre 2026"
+        dates: "Junio 2023 – Actual"
         bullets:
           - "Liderazgo de equipos TI en proyectos de desarrollo de software institucional"
-          - "Desarrollo de aplicaciones con arquitectura moderna basada en Kubernetes y microservicios"
-          - "Implementación de integración con Vault, ELK Stack y MinIO"
-          - "Modernización del proyecto del sistema principal de la Aduana Nacional SUMA 2 orientados a microservicios con Kubernetes y CI/CD en Java 21 y Angular 19"
+          - "Definición de nueva arquitectura tecnológica basada en Kubernetes, Onion Architecture y enfoque Event-Driven"
+          - "Integración de plataformas transversales: Vault (gestión de secretos), ELK Stack (observabilidad) y MinIO (almacenamiento de objetos)"
+          - "Evaluación e incorporación de Inteligencia Artificial (RAG) para gestión documental y apoyo a procesos internos"
+          - "Gestión de gobernanza tecnológica y definición de estándares de desarrollo"
+          - "[LOGRO A COMPLETAR] Mejora de métricas específicas (ej: reducción de tiempo de deployment en X%, ahorro de recursos en Y%)"
 
       - title: "Servicio de Impuestos Nacionales"
-        sub: "Profesional F"
+        sub: "Profesional F - Scrum Master / Arquitecto de Software"
+        location: "Zona Sur, Los Pinos, Av. José Aguirre entre calle 25 y calle 5"
         dates: "Marzo 2022 – Mayo 2023"
         bullets:
-          - "Función como Scrum Master de Equipo"
-          - "Implementación de microservicios con Java para el proyecto de Declaraciones Juradas V2"
-          - "Integración de autenticación y autorización con Keycloak para backend Java y frontend Angular"
-          - "Creación de proyectos con Angular 14 en el proyecto de declaraciones juradas"
-          - "Desarrollo de APIs REST y servicios backend con Java"
-          - "Integración de APIDOC, SonarQube y métricas de calidad"
+          - "Rol como Scrum Master y Arquitecto de Software liderando equipos de desarrollo"
+          - "Diseño e implementación de arquitectura de microservicios con Java y Onion Architecture"
+          - "Definición de estándares de seguridad institucional mediante Keycloak (OAuth2 / OpenID Connect)"
+          - "Implementación de pipelines CI/CD en GitLab con integración de SonarQube para control de calidad"
+          - "Integración del stack ELK para centralización de logs y monitoreo"
+          - "Definición de patrones de diseño y mejores prácticas de desarrollo"
+          - "[LOGRO A COMPLETAR] Implementación exitosa de X microservicios, reducción de deuda técnica en Y%"
 
       - title: "Servicio de Impuestos Nacionales"
-        sub: "Profesional J"
+        sub: "Profesional J - Scrum Master / Arquitecto de Software"
+        location: "Zona Sur, Los Pinos, Av. José Aguirre entre calle 25 y calle 5"
         dates: "Abril 2021 – Marzo 2022"
         bullets:
-          - "Función como Scrum Master de Equipo"
-          - "Implementación del SIAT en línea - Declaraciones Juradas"
-          - "Desarrollo de arquitectura .NET Core para Web API"
-          - "Integración de Vault y logs con ELK en .NET Core"
-          - "Creación de proyectos de frontend con Razor Pages"
-          - "Creación de librerías reutilizables para Java y .NET Core"
-
-      - title: "Servicio de Impuestos Nacionales"
-        sub: "Consultor Individual de Línea - Consultor I - Para Testeo de Aplicaciones Java"
-        dates: "Junio 2020 – Diciembre 2020"
-        bullets:
-          - "Desarrollo de sistemas de información full stack"
-          - "Desarrollo del sistema de facturación electrónica virtual"
-          - "Desarrollo de servicios back-end REST/SOAP"
-          - "Desarrollo de interfaces front-end con JSF y Angular"
-          - "Desarrollo de aplicaciones de escritorio con JavaFX"
-
-      - title: "Servicio de Impuestos Nacionales"
-        sub: "Consultor Individual de Línea - Consultor J - en Desarrollo de Sistemas"
-        dates: "Febrero 2020 – Junio 2020"
-        bullets:
-          - "Desarrollar el sistema de facturación electrónica SIAT, programación full stack"
-          - "Aplicaciones de escritorio con JavaFX"
-          - "Servicios web SOAP/REST"
-          - "Desarrollo con JSF y Angular"
-
-      - title: "Servicio de Impuestos Nacionales"
-        sub: "Consultores de Línea - Técnico I, Desarrollador Java para el nuevo sistema integrado del SIN"
-        dates: "Marzo 2019 – Diciembre 2019"
-        bullets:
-          - "Analizar, desarrollar y realizar pruebas en los sistemas asignados"
-          - "Módulo Estados Financieros"
-          - "Módulo Facturación Electrónica"
-          - "Módulo Hoteles"
-          - "Módulo Agentes de Información"
-
-      - title: "Entel"
-        sub: "Consultores Tecnico para el proyecto instalacion de comunicacioes por radio base IRB-1"
-        dates: "Agosto 2017 – julio 2018"
-        bullets:
-          - "Supervisar la correcta implementacion de radio bases por la contratistas"
-          - "Realizar la validacion de control de calidad de las radio bases implementadas"
-          - "Realiza inspecciones de funcionamiento y revision de la operativa de las radio bases"
-
-      - title: "Entel"
-        sub: "Consultores Tecnico para el proyecto Telecetros Satelitales Integrales Fase 2"
-        dates: "Agosto 2016 – febreo 2017"
-        bullets:
-          - "Supervisar la correcta implementacion de los telecentros instalados por las contratistas"
-          - "Realizar el soporte y revision de los telecentros"
+          - "Rol como Scrum Master y Arquitecto de Software"
+          - "Diseño de arquitectura .NET Core para Web API del SIAT en línea"
+          - "Implementación de arquitectura Onion con patrones CQRS y MediatR"
+          - "Integración de Vault para gestión de secretos y ELK Stack para logs en .NET Core"
+          - "Definición de estándares de desarrollo y creación de librerías reutilizables"
+          - "[LOGRO A COMPLETAR] Optimización de X procesos del SIAT, mejora de performance en Y%"
 
   # EDUCACIÓN
   - title: Educación
@@ -103,7 +65,6 @@ sections:
         sub: "Escuela de Gestión Pública Plurinacional (EGGP)"
         location: "Bolivia"
         dates: "Agosto 2019 – Diciembre 2019"
-        nivel: "Diplomado - postgrado"
         bullets:
           - "Desarrollo con tecnologías de software libre"
 
@@ -111,192 +72,94 @@ sections:
         sub: "Facultad Nacional de Ingeniería"
         location: "Universidad Técnica de Oruro"
         dates: "Enero 2005 – Julio 2012"
-        nivel: "Licenciatura - pregrado"
-
-  # CERTIFICACIONES - ENFOCADAS EN ANGULAR Y DESARROLLO (ORDENADAS POR FECHA)
-  - title: Certificaciones y Cursos
-    entries:
-      - title: "Curso de Git, Gitlab, Gitlab CI/CD"
-        sub: "IQuattro"
-        horas: "30"
-        dates: "4 al 15 de noviembre de 2024"
         bullets:
-          - "Curso de 30 horas"
+          - "[OPCIONAL] Tesis: [Título de tesis si aplica]"
 
-      - title: "Curso de Docker y Kubernetes"
-        sub: "IQuattro"
-        horas: "25"
-        dates: "21 al 31 de octubre de 2024"
-        bullets:
-          - "Curso de 25 horas"
-
-      - title: "Taller de Pruebas de Software Manuales y Automatizadas con Postman, Playwright y K6"
-        sub: "IQuattro"
-        horas: "30"
-        dates: "7 al 18 de octubre de 2024"
-        bullets:
-          - "Taller de 30 horas"
-
-      - title: "Curso de Junit, Jmeter, Selenium"
-        sub: "IQuattro"
-        horas: "30"
-        dates: "7 al 18 de octubre de 2024"
-        bullets:
-          - "Curso de 30 horas"
-
-      - title: "Curso de ISTQB Certified Tester"
-        sub: "IQuattro"
-        horas: "20"
-        dates: "23 de septiembre al 3 de octubre de 2024"
-        bullets:
-          - "Curso de 20 horas"
-
-      - title: "Curso de Desarrollo de Aplicaciones Móviles sobre Software Libre"
-        sub: "IQuattro"
-        horas: "25"
-        dates: "9 al 19 de septiembre de 2024"
-        bullets:
-          - "Curso de 25 horas"
-
-      - title: "Curso de Spring Boot Avanzado"
-        sub: "IQuattro"
-        horas: "24"
-        dates: "28 de agosto al 6 de septiembre de 2024"
-        bullets:
-          - "Curso de 24 horas"
-
-      - title: "Curso de Angular Avanzado"
-        sub: "IQuattro"
-        horas: "20"
-        dates: "19 al 27 de agosto de 2024"
-        bullets:
-          - "Curso de 20 horas"
-
-      - title: "Curso de NestJS"
-        sub: "IQuattro"
-        horas: "20"
-        dates: "7 al 15 de agosto de 2024"
-        bullets:
-          - "Curso de 20 horas"
-
-      - title: "Curso de Arquitectura"
-        sub: "IQuattro"
-        horas: "15"
-        dates: "29 de julio al 2 de agosto de 2024"
-        bullets:
-          - "Curso de 15 horas"
-
-      - title: "Responsabilidad por la Función Pública"
-        sub: "CENCAP"
-        horas: "10"
-        dates: "10 al 18 de abril de 2023"
-        bullets:
-          - "Curso de 10 horas"
-
-      - title: "Políticas Públicas"
-        sub: "CENCAP"
-        horas: "10"
-        dates: "6 al 14 de febrero de 2023"
-        bullets:
-          - "Curso de 10 horas"
-
-      - title: "Ley N° 1178"
-        sub: "CENCAP"
-        horas: "10"
-        dates: "27 de febrero al 7 de marzo de 2023"
-        bullets:
-          - "Curso de 10 horas"
-
-      - title: "Prevención de la Violencia"
-        sub: "EGGP"
-        horas: "50"
-        dates: "9 al 22 de agosto de 2021"
-        bullets:
-          - "Curso de 50 horas"
-
-      - title: "Java Avanzado"
-        sub: "IQuattro"
-        horas: "30"
-        dates: "28 de noviembre al 8 de diciembre de 2022"
-        bullets:
-          - "Curso de 30 horas"
-
-      - title: "Programación en Java 11 Avanzado"
-        sub: "IQuattro"
-        horas: "20"
-        dates: "1 al 11 de noviembre de 2022"
-        bullets:
-          - "Curso de 20 horas"
-
-  # SKILLS TÉCNICOS - ENFOCADAS EN DESARROLLO
+  # SKILLS TÉCNICOS - ENFOCADAS EN ARQUITECTURA
   - title: Competencias Técnicas
     entries:
-      - title: "Frameworks Frontend"
+      - title: "Arquitectura de Software"
         bullets:
-          - "Angular"
-          - "TypeScript"
-          - "JSF"
-          - "Razor Pages (.NET)"
-          - "JavaFX (aplicaciones de escritorio)"
-          - "HTML5, CSS3, JavaScript"
-          - "StreamLit"
-          - "Flutter"
+          - "Microservicios y arquitecturas distribuidas"
+          - "Onion Architecture / Clean Architecture"
+          - "Event-Driven Architecture"
+          - "Domain-Driven Design (DDD)"
+          - "CQRS y Event Sourcing"
+          - "API Design (REST / SOAP)"
 
-      - title: "Lenguajes de Programación"
+      - title: "Cloud & DevOps"
         bullets:
-          - "Java (JDK 11-21)"
-          - "C# / .NET Core (5-7)"
-          - "Go"
-          - "Python"
-          - "JavaScript, TypeScript"
+          - "Docker y Kubernetes (K8s)"
+          - "GitLab CI/CD pipelines"
+          - "Azure Cloud Services"
+          - "HashiCorp Vault (gestión de secretos)"
+          - "ArgoCD (GitOps)"
+          - "Infrastructure as Code"
 
-      - title: "Frameworks y Tecnologías Backend"
+      - title: "Observabilidad y Monitoreo"
         bullets:
-          - "Spring Boot, Quarkus, Javalin, Spark"
-          - ".NET Core / .NET 6+"
-          - "Sql2o, Dapper"
-          - "Hibernate, Entity Framework"
-          - "Node.js (API development)"
-
-      - title: "Bases de Datos"
-        bullets:
-          - "PostgreSQL"
-          - "MongoDB"
-          - "Oracle"
-
-      - title: "APIs y Servicios Web"
-        bullets:
-          - "REST APIs"
-          - "SOAP Services"
-          - "NestJS (framework Node.js)"
-
-      - title: "Testing y Calidad"
-        bullets:
+          - "ELK Stack (Elasticsearch, Logstash, Kibana)"
+          - "Centralización de logs"
+          - "Métricas y tracing distribuido"
+          - "Alerting y monitoring"
           - "SonarQube (calidad de código)"
           - "JMeter (testing de rendimiento)"
-          - "Testing de aplicaciones web"
 
-      - title: "DevOps y Herramientas"
-        bullets:
-          - "GitLab CI/CD"
-          - "Git, GitLab"
-          - "Docker"
-          - "Vault (gestión de secretos)"
-          - "ELK Stack (logs y monitoreo)"
-
-      - title: "Seguridad"
+      - title: "Seguridad e Identidad"
         bullets:
           - "Keycloak (OAuth2 / OpenID Connect)"
           - "Autenticación y autorización"
+          - "Seguridad institucional"
+          - "Gestión de secretos con Vault"
+          - "OWASP security best practices"
 
-      - title: "Inteligencia Artificial"
+      - title: "Backend Development"
         bullets:
-          - "Orquestador de Agentes y Herder"
-          - "Agentes CLI: Claudecode, Opencode, Grok, Debin, Cline, Gemini CLI, Amp"
-          - "WorkFlow con Agentes con CrewAI y LangChain"
-          - "Agentes personales: OpenClaw y Hermes"
-          - "Modelos LLM: Gemini, Qwen, Grok, GPT, Mistral, DeepSeek, Mimo, Aider"
-          - "Plataformas: OpenRouter, llama.cpp"
+          - "Java (JDK 11-21), Spring Boot, Quarkus"
+          - ".NET Core / .NET 6+"
+          - "Go (Golang)"
+          - "PostgreSQL, MongoDB, Oracle"
+          - "Entity Framework, Dapper, Hibernate"
+
+      - title: "Liderazgo y Gestión"
+        bullets:
+          - "Liderazgo técnico de equipos TI"
+          - "Gestión de proyectos y equipos Scrum"
+          - "Scrum Master"
+          - "Definición de estándares técnicos"
+          - "Gobernanza tecnológica"
+          - "Mentoría y capacitación de equipos"
+
+  # CERTIFICACIONES - ENFOCADAS EN ARQUITECTURA
+  - title: Certificaciones y Cursos
+    entries:
+      - title: "Java Avanzado"
+        sub: "IQuattro"
+        dates: "Noviembre 2022 – Diciembre 2022"
+        bullets:
+          - "Curso de 30 horas"
+          - "Java avanzado y patrones de diseño"
+
+      - title: "Go Programming"
+        sub: "SoloLearn"
+        dates: "Enero 2023"
+        bullets:
+          - "Curso de 5 horas"
+          - "Desarrollo con lenguaje Go"
+
+      - title: "C# Programming"
+        sub: "SoloLearn"
+        dates: "Enero 2023"
+        bullets:
+          - "Curso de 5 horas"
+          - "Desarrollo con C# y .NET"
+
+      - title: "Curso Profesional de Kotlin"
+        sub: "Código Facilito"
+        dates: "Mayo 2022"
+        bullets:
+          - "Curso profesional de 2 horas"
+          - "Desarrollo con Kotlin"
 
   # IDIOMAS
   - title: Idiomas
@@ -311,17 +174,47 @@ sections:
           - "Lectura de documentación técnica"
           - "Comunicación en entornos de trabajo"
 
+  # SOFT SKILLS - ENFOCADAS EN LIDERAZGO
+  - title: Soft Skills
+    entries:
+      - title: "Liderazgo"
+        bullets:
+          - "Liderazgo técnico y de equipos"
+          - "Scrum Master"
+          - "Toma de decisiones estratégicas"
+          - "Resolución de conflictos"
+          - "Motivación de equipos"
+
+      - title: "Comunicación"
+        bullets:
+          - "Comunicación técnica efectiva"
+          - "Presentación a stakeholders"
+          - "Documentación clara"
+          - "Negociación"
+
+      - title: "Aprendizaje Continuo"
+        bullets:
+          - "Constante actualización tecnológica"
+          - "Auto-didacta"
+          - "Innovación y mejora continua"
+
   # REFERENCIAS PROFESIONALES
   - title: Referencias Profesionales
     entries:
-      - title: "Ramiro Mercado"
+      - title: "Carlos Monrroy"
         sub: "Aduana Nacional"
-        dates: "72045373"
+        dates: "71232055"
         bullets:
           - "Contacto disponible para referencias"
 
-      - title: "Fernando Yañez"
+      - title: "Luis Landaeta"
         sub: "Servicio de Impuestos Nacionales"
-        dates: "72590163"
+        dates: "75271537"
+        bullets:
+          - "Contacto disponible para referencias"
+
+      - title: "Cristina Gutierrez"
+        sub: "Servicio de Impuestos Nacionales"
+        dates: "71918110"
         bullets:
           - "Contacto disponible para referencias"

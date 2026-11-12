@@ -1,0 +1,67 @@
+---
+// ============================================================================
+// Sidebar Component - Astro (Two Column Layout)
+// ============================================================================
+
+import type { SiteConfig, CVData, UserPreferences } from '../types/cv';
+import { ThemeSwitcher } from '../scripts/theme-switcher';
+
+interface Props {
+  site: SiteConfig;
+  cvData: CVData;
+}
+
+const { site, cvData } = Astro.props;
+const prefs: Partial<UserPreferences> = { theme: 'blue', font: 'inter', size: '18', layout: 'two-column' };
+---
+
+<aside class="cv-sidebar">
+  <img src={site.about_profile_image} alt={site.title} class="sidebar-photo">
+  <h2 class="sidebar-name">{site.title}</h2>
+  <p class="sidebar-title">{site.department}</p>
+  <p class="sidebar-title" style="font-size: 0.85rem; opacity: 0.8;">{site.affiliation}</p>
+
+  <div class="sidebar-section">
+    <h3>Contacto</h3>
+    <div class="sidebar-contact">
+      <a href={`mailto:${site.email}`}>📧 {site.email}</a>
+      <a href={`tel:${site.phone}`}>📞 {site.phone}</a>
+      <a href={`https://linkedin.com/in/${site.linkedin}`}>💼 LinkedIn</a>
+      <a href={`https://github.com/${site.github}`}>🐙 GitHub</a>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Competencias</h3>
+    <div class="sidebar-skills-grid">
+      {cvData.sections
+        .filter(s => s.title.toLowerCase().includes('competencias'))
+        .flatMap(s => s.entries)
+        .map(entry => (
+          <div class="skill-category">
+            <h4>{entry.title}</h4>
+            <ul>
+              {entry.bullets?.map(bullet => <li>{bullet}</li>)}
+            </ul>
+          </div>
+        ))}
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Idiomas</h3>
+    {cvData.sections
+      .filter(s => s.title.toLowerCase().includes('idiomas'))
+      .flatMap(s => s.entries)
+      .map(entry => (
+        <div class="skill-category">
+          <h4>{entry.title}</h4>
+          <ul>
+            {entry.bullets?.map(bullet => <li>{bullet}</li>)}
+          </ul>
+        </div>
+      ))}
+  </div>
+
+  <div set:html={ThemeSwitcher.generateThemeSelectorHTML('two-column', prefs)} />
+</aside>

@@ -1,0 +1,21 @@
+{
+  "name": "CV Profesional - Rolando Moises Quispe Mendoza",
+  "short_name": "CV Rolando Quispe",
+  "description": "CV Profesional - Arquitecto de Software & Líder Técnico",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business"],
+  "lang": "es",
+  "dir": "ltr"
+}

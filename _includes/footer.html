@@ -1,0 +1,65 @@
+<!-- ==========================================================================
+     Footer Compartido - CV Principal
+     Incluye: theme-switcher.js y scripts comunes
+     ========================================================================== -->
+
+<!-- Theme Switcher - Carga asíncrona para no bloquear render -->
+<script>
+  // Inyectar theme-switcher.js dinámicamente
+  (function() {
+    var script = document.createElement('script');
+    script.src = '/_assets/js/theme-switcher.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  })();
+</script>
+
+<!-- Fallback inline para theme-selector inmediato (evita FOUC) -->
+<script>
+  // Aplicar tema guardado inmediatamente para evitar flash
+  (function() {
+    try {
+      var theme = localStorage.getItem('cv_theme') || 'blue';
+      var font = localStorage.getItem('cv_font') || 'inter';
+      var size = localStorage.getItem('cv_size') || '18';
+      var root = document.documentElement;
+
+      // Temas definidos inline para aplicación inmediata
+      var themes = {
+        blue: {primary:'#2563eb',secondary:'#1e40af',accent:'#3b82f6',text:'#1f2937',lightText:'#6b7280',sectionBg:'#f9fafb',borderColor:'#e5e7eb',headerRadius:'0.5rem',sectionRadius:'0.5rem',printBg:'white',printText:'black',printBorder:'#2563eb'},
+        green: {primary:'#059669',secondary:'#047857',accent:'#10b981',text:'#1f2937',lightText:'#6b7280',sectionBg:'#f0fdf4',borderColor:'#bbf7d0',headerRadius:'0.5rem',sectionRadius:'0.5rem',printBg:'white',printText:'black',printBorder:'#059669'},
+        red: {primary:'#dc2626',secondary:'#b91c1c',accent:'#ef4444',text:'#1f2937',lightText:'#6b7280',sectionBg:'#fef2f2',borderColor:'#fecaca',headerRadius:'0.5rem',sectionRadius:'0.5rem',printBg:'white',printText:'black',printBorder:'#dc2626'},
+        purple: {primary:'#7c3aed',secondary:'#6d28d9',accent:'#8b5cf6',text:'#1f2937',lightText:'#6b7280',sectionBg:'#faf5ff',borderColor:'#e9d5ff',headerRadius:'0.5rem',sectionRadius:'0.5rem',printBg:'white',printText:'black',printBorder:'#7c3aed'},
+        gray: {primary:'#374151',secondary:'#1f2937',accent:'#4b5563',text:'#1f2937',lightText:'#6b7280',sectionBg:'#f3f4f6',borderColor:'#d1d5db',headerRadius:'0.5rem',sectionRadius:'0.5rem',printBg:'white',printText:'black',printBorder:'#374151'},
+        dark: {primary:'#3b82f6',secondary:'#2563eb',accent:'#60a5fa',text:'#f9fafb',lightText:'#9ca3af',sectionBg:'#1f2937',borderColor:'#374151',headerRadius:'0.5rem',sectionRadius:'0.5rem',printBg:'white',printText:'black',printBorder:'#3b82f6'},
+        modern: {primary:'#0891b2',secondary:'#0e7490',accent:'#06b6d4',text:'#1f2937',lightText:'#6b7280',sectionBg:'#ecfeff',borderColor:'#a5f3fc',headerRadius:'1rem',sectionRadius:'1rem',printBg:'white',printText:'black',printBorder:'#0891b2'},
+        classic: {primary:'#1e3a8a',secondary:'#1e40af',accent:'#3b82f6',text:'#1f2937',lightText:'#6b7280',sectionBg:'#ffffff',borderColor:'#94a3b8',headerRadius:'0',sectionRadius:'0',printBg:'white',printText:'black',printBorder:'#1e3a8a'}
+      };
+
+      var fonts = {
+        inter: "'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        roboto: "'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        opensans: "'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        lato: "'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        montserrat: "'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+      };
+
+      var t = themes[theme] || themes.blue;
+      root.style.setProperty('--primary-color', t.primary);
+      root.style.setProperty('--secondary-color', t.secondary);
+      root.style.setProperty('--accent-color', t.accent);
+      root.style.setProperty('--text-color', t.text);
+      root.style.setProperty('--light-text', t.lightText);
+      root.style.setProperty('--section-bg', t.sectionBg);
+      root.style.setProperty('--border-color', t.borderColor);
+      root.style.setProperty('--header-radius', t.headerRadius);
+      root.style.setProperty('--section-radius', t.sectionRadius);
+      root.style.setProperty('--print-bg', t.printBg);
+      root.style.setProperty('--print-text', t.printText);
+      root.style.setProperty('--print-border', t.printBorder);
+      root.style.setProperty('--base-font-family', fonts[font] || fonts.inter);
+      root.style.setProperty('--base-font-size', size + 'px');
+      root.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>

@@ -1,0 +1,33 @@
+---
+// ============================================================================
+// Vertical Layout (default) - index.astro
+// ============================================================================
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import { siteConfig } from '../data/site';
+import { generateCV } from '../data/merge';
+import { resolveCVVersion } from '../data/version';
+import { CV_VERSIONS, type CVVersion } from '../types/cv';
+
+export interface Props {
+  version?: CVVersion;
+}
+
+const { version = resolveCVVersion() } = Astro.props;
+const cvData = generateCV(version);
+
+const pageTitle = `${siteConfig.title} • ${CV_VERSIONS[version].label}`;
+const pageDescription = siteConfig.description;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} layoutClass="layout-vertical">
+  <Header site={siteConfig} layout="vertical" />
+
+  <article class="cv layout-vertical">
+    {cvData.sections.map(section => (
+      <Section section={section} />
+    ))}
+  </article>
+</BaseLayout>

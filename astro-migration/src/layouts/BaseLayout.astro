@@ -1,0 +1,54 @@
+---
+// ============================================================================
+// Base Layout - Astro
+// ============================================================================
+
+import '../styles/global.css';
+import { siteConfig } from '../data/site';
+import { withBase } from '../utils/url';
+
+interface Props {
+  title: string;
+  description?: string;
+  layoutClass?: string;
+  lang?: string;
+}
+
+const { title, description = '', layoutClass = '', lang = siteConfig.lang } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang={lang} class={layoutClass}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={siteConfig.title} />
+    <meta property="og:locale" content={lang} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href={withBase('favicon.svg')} />
+    <link rel="alternate icon" href={withBase('favicon.ico')} />
+    <link rel="apple-touch-icon" href={withBase('apple-touch-icon.png')} />
+    <link rel="manifest" href={withBase('manifest.json')} />
+    <meta name="theme-color" content="#2563eb" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <!-- Script cliente: tema, fuente, tamaño y persistencia en localStorage -->
+    <script>
+      import '../scripts/theme-switcher.ts';
+    </script>
+  </body>
+</html>

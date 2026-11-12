@@ -1,0 +1,42 @@
+<!-- ==========================================================================
+     Section Renderer - CV Principal
+     Renderiza una sección del CV desde site.data.cv.sections
+     Uso: {% include section.html section=section layout="vertical" %}
+     Layouts: vertical, classic, two-column-main, timeline
+     ========================================================================== -->
+
+{% assign layout_type = include.layout | default: "vertical" %}
+{% assign section = include.section %}
+
+{% comment %} Filtrar secciones según layout {% endcomment %}
+{% if layout_type == "two-column-main" and (section.title contains "Competencias" or section.title contains "Idiomas") %}
+  {% comment %} En two-column, skills e idiomas van en sidebar {% endcomment %}
+{% else %}
+<section class="cv-section">
+  <h2 class="cv-section-title">{{ section.title | upcase }}</h2>
+  <hr class="cv-section-rule" />
+  {% for entry in section.entries %}
+  <div class="cv-entry">
+    <div class="cv-entry-header">
+      <div class="cv-entry-main">
+        <span class="cv-entry-institution">{{ entry.title }}</span>
+        {% if entry.sub %}
+        <span class="cv-entry-degree">, <em>{{ entry.sub }}</em></span>
+        {% endif %}
+      </div>
+      <div class="cv-entry-meta">
+        {% if entry.location %}<span class="cv-entry-location">{{ entry.location }}</span>{% endif %}
+        {% if entry.dates %}<span class="cv-entry-dates">{{ entry.dates }}</span>{% endif %}
+      </div>
+    </div>
+    {% if entry.bullets %}
+    <ul class="cv-entry-bullets">
+      {% for bullet in entry.bullets %}
+      <li>{{ bullet | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+</section>
+{% endif %}

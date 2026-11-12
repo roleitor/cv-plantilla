@@ -1,0 +1,58 @@
+---
+// ============================================================================
+// Two Column Layout - two-column/index.astro
+// ============================================================================
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { siteConfig } from '../../data/site';
+import { generateCV } from '../../data/merge';
+import { resolveCVVersion } from '../../data/version';
+import { CV_VERSIONS, type CVVersion } from '../../types/cv';
+
+export interface Props {
+  version?: CVVersion;
+}
+
+const { version = resolveCVVersion() } = Astro.props;
+const cvData = generateCV(version);
+
+const pageTitle = `${siteConfig.title} • ${CV_VERSIONS[version].label} • Dos Columnas`;
+const pageDescription = siteConfig.description;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} layoutClass="layout-two-column">
+  <div class="cv-container layout-two-column">
+    <Sidebar site={siteConfig} cvData={cvData} />
+
+    <main class="cv-main">
+      <div class="main-header">
+        <h1>{siteConfig.title}</h1>
+        <p>{siteConfig.affiliation}</p>
+      </div>
+
+      {cvData.sections
+        .filter(s => !s.title.toLowerCase().includes('competencias') && !s.title.toLowerCase().includes('idiomas'))
+        .map(section => (
+          <section class="main-section">
+            <h2>{section.title}</h2>
+            {section.entries.map(entry => (
+              <div class="entry">
+                <h3>{entry.title}</h3>
+                {entry.sub && <p class="sub">{entry.sub}</p>}
+                {entry.location && <p class="location">{entry.location}</p>}
+                {entry.dates && <p class="dates">{entry.dates}</p>}
+                {entry.nivel && <p class="dates">{entry.nivel}</p>}
+                {entry.horas && <p class="dates">{entry.horas} horas</p>}
+                {entry.bullets && entry.bullets.length > 0 && (
+                  <ul>
+                    {entry.bullets.map(bullet => <li>{bullet}</li>)}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </section>
+        ))}
+    </main>
+  </div>
+</BaseLayout>

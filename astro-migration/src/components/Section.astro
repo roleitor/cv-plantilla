@@ -1,0 +1,49 @@
+---
+// ============================================================================
+// Section Component - Astro
+// Renderiza una sección del CV
+// ============================================================================
+
+import type { CVSection, CVEntry } from '../types/cv';
+
+interface Props {
+  section: CVSection;
+  variant?: 'default' | 'vertical' | 'classic' | 'two-column' | 'timeline';
+}
+
+const { section, variant = 'default' } = Astro.props;
+---
+
+<section class="cv-section" data-section-title={section.title.toUpperCase()} data-variant={variant}>
+  <h2 class="cv-section-title">{section.title.toUpperCase()}</h2>
+  <hr class="cv-section-rule" />
+
+  {section.entries.map((entry: CVEntry) => (
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <div class="cv-entry-main">
+          <span class="cv-entry-institution">{entry.title}</span>
+          {entry.sub && <span class="cv-entry-degree">, <em>{entry.sub}</em></span>}
+        </div>
+        <div class="cv-entry-meta">
+          {entry.location && <span class="cv-entry-location">{entry.location}</span>}
+          {entry.dates && <span class="cv-entry-dates">{entry.dates}</span>}
+          {entry.nivel && <span class="cv-entry-dates">{entry.nivel}</span>}
+          {entry.horas && <span class="cv-entry-dates">{entry.horas} horas</span>}
+        </div>
+      </div>
+
+      {entry.bullets && entry.bullets.length > 0 && (
+        <ul class="cv-entry-bullets">
+          {entry.bullets.map((bullet: string) => (
+            <li>{bullet}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  ))}
+</section>
+
+<style is:global>
+  /* Estilos específicos si son necesarios */
+</style>

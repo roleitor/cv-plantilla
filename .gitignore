@@ -4,3 +4,14 @@
 _site
 Gemfile.lock
 *.code-workspace
+
+# Astro (directorio de trabajo)
+astro-migration/dist/
+astro-migration/astro-dist/
+astro-migration/.astro/
+astro-migration/.astro-build-temp/
+astro-migration/node_modules/
+
+# Playgrounds / pruebas scratch de Astro
+astro-test/
+test-astro/

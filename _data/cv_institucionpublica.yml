@@ -1,79 +1,61 @@
 sections:
-  # PERFIL PROFESIONAL - ENFOCADO EN DESARROLLO
+  # PERFIL PROFESIONAL
   - title: Perfil Profesional
     entries:
-      - title: "Desarrollador Full Stack y Arquitecto de Software"
+      - title: "Ingeniero de Sistemas | Senior Software Engineer | Software Architect"
         bullets:
-          - "Ingeniero de Sistemas con experiencia en desarrollo full stack y arquitectura de software"
-          - "Especializado en desarrollo con Angular, Java, .NET Core y TypeScript"
-          - "Experiencia en implementación de microservicios, APIs REST/SOAP y aplicaciones de escritorio"
-          - "Conocimientos en arquitectura Onion, CI/CD, testing y calidad de código"
-          - "Me gusta innovar y crear sistemas con las mejores prácticas, en constante aprendizaje con las últimas tendencias tecnológicas"
+          - "Ingeniero de Sistemas con experiencia en desarrollo de software, arquitectura de soluciones y liderazgo técnico en proyectos de transformación digital."
+          - "Especializado en desarrollo backend y frontend con Java, Spring Boot, .NET, Angular, TypeScript y Node.js."
+          - "Experiencia en diseño e implementación de arquitecturas de microservicios, APIs REST/SOAP, sistemas empresariales e integración de plataformas."
+          - "Conocimientos en arquitectura Onion, patrones de diseño, seguridad, autenticación, CI/CD, contenedores y orquestación con Kubernetes."
+          - "Experiencia en modernización de sistemas institucionales, automatización de procesos de desarrollo y adopción de herramientas de inteligencia artificial aplicadas a ingeniería de software."
+          - "Orientado a la calidad del software, resolución de problemas, mejora continua y aplicación de buenas prácticas de ingeniería."
 
-  # EXPERIENCIA PROFESIONAL - ENFOCADA EN DESARROLLO
+  # EXPERIENCIA PROFESIONAL
   - title: Experiencia Profesional
     entries:
       - title: "Aduana Nacional"
-        sub: "Supervisor de Desarrollo"
+        sub: "Trayectoria profesional: tres cargos de progresión y crecimiento dentro de la institución"
         location: "Bolivia"
         dates: "Junio 2023 – Octubre 2026"
         bullets:
-          - "Liderazgo de equipos TI en proyectos de desarrollo de software institucional"
-          - "Desarrollo de aplicaciones con arquitectura moderna basada en Kubernetes y microservicios"
-          - "Implementación de integración con Vault, ELK Stack y MinIO"
-          - "Modernización del proyecto del sistema principal de la Aduana Nacional SUMA 2 orientados a microservicios con Kubernetes y CI/CD en Java 21 y Angular 19"
+          - "Supervisor de Desarrollo de Sistemas | [Fecha de inicio] – Octubre 2026"
+          - "Responsabilidades: liderazgo y coordinación de equipos de desarrollo, planificación técnica, seguimiento de proyectos, revisión de soluciones y definición de lineamientos de desarrollo."
+          - "Profesional en Desarrollo de Sistemas | [Fecha de inicio] – [Fecha de finalización]"
+          - "Responsabilidades: desarrollo de soluciones empresariales, implementación de servicios, integración de sistemas y participación en proyectos de modernización tecnológica."
+          - "[Tercer cargo según certificado] | [Fecha de inicio] – [Fecha de finalización]"
+          - "Responsabilidades: análisis, desarrollo, implementación y mantenimiento de sistemas de información."
+          - "Participación en la modernización del Sistema Único de Modernización Aduanera (SUMA 2), orientada a una arquitectura de microservicios y despliegue sobre Kubernetes."
+          - "Diseño e implementación de soluciones backend con Java 21, Spring Boot y NestJS, y frontend con Angular 19."
+          - "Implementación y adopción de herramientas de infraestructura y observabilidad, incluyendo Kubernetes, GitLab CI/CD, Argo CD, HashiCorp Vault, ELK Stack y MinIO."
+          - "Participación en la definición de estándares de desarrollo, arquitectura de software, integración continua y automatización de despliegues."
 
       - title: "Servicio de Impuestos Nacionales"
-        sub: "Profesional F"
-        dates: "Marzo 2022 – Mayo 2023"
+        sub: "Trayectoria profesional en desarrollo de sistemas y soluciones tributarias"
+        location: "Bolivia"
+        dates: "Marzo 2019 – Mayo 2023"
         bullets:
-          - "Función como Scrum Master de Equipo"
-          - "Implementación de microservicios con Java para el proyecto de Declaraciones Juradas V2"
-          - "Integración de autenticación y autorización con Keycloak para backend Java y frontend Angular"
-          - "Creación de proyectos con Angular 14 en el proyecto de declaraciones juradas"
-          - "Desarrollo de APIs REST y servicios backend con Java"
-          - "Integración de APIDOC, SonarQube y métricas de calidad"
-
-      - title: "Servicio de Impuestos Nacionales"
-        sub: "Profesional J"
-        dates: "Abril 2021 – Marzo 2022"
-        bullets:
-          - "Función como Scrum Master de Equipo"
-          - "Implementación del SIAT en línea - Declaraciones Juradas"
-          - "Desarrollo de arquitectura .NET Core para Web API"
-          - "Integración de Vault y logs con ELK en .NET Core"
-          - "Creación de proyectos de frontend con Razor Pages"
-          - "Creación de librerías reutilizables para Java y .NET Core"
-
-      - title: "Servicio de Impuestos Nacionales"
-        sub: "Consultor Individual de Línea - Consultor I - Para Testeo de Aplicaciones Java"
-        dates: "Junio 2020 – Diciembre 2020"
-        bullets:
-          - "Desarrollo de sistemas de información full stack"
-          - "Desarrollo del sistema de facturación electrónica virtual"
-          - "Desarrollo de servicios back-end REST/SOAP"
-          - "Desarrollo de interfaces front-end con JSF y Angular"
-          - "Desarrollo de aplicaciones de escritorio con JavaFX"
-
-      - title: "Servicio de Impuestos Nacionales"
-        sub: "Consultor Individual de Línea - Consultor J - en Desarrollo de Sistemas"
-        dates: "Febrero 2020 – Junio 2020"
-        bullets:
-          - "Desarrollar el sistema de facturación electrónica SIAT, programación full stack"
-          - "Aplicaciones de escritorio con JavaFX"
-          - "Servicios web SOAP/REST"
-          - "Desarrollo con JSF y Angular"
-
-      - title: "Servicio de Impuestos Nacionales"
-        sub: "Consultores de Línea - Técnico I, Desarrollador Java para el nuevo sistema integrado del SIN"
-        location: "Zona Sur, Los Pinos, Av. José Aguirre entre calle 25 y calle 5"
-        dates: "Marzo 2019 – Diciembre 2019"
-        bullets:
-          - "Analizar, desarrollar y realizar pruebas en los sistemas asignados"
-          - "Módulo Estados Financieros"
-          - "Módulo Facturación Electrónica"
-          - "Módulo Hoteles"
-          - "Módulo Agentes de Información"
+          - "Profesional F | Marzo 2022 – Mayo 2023"
+          - "Desempeño como Scrum Master de equipo y desarrollador de soluciones backend con Java y Spring Boot."
+          - "Implementación de microservicios para el proyecto Declaraciones Juradas V2."
+          - "Integración de mecanismos de autenticación y autorización con Keycloak para aplicaciones backend Java y frontend Angular."
+          - "Desarrollo de aplicaciones frontend con Angular 14 y servicios de integración."
+          - "Integración de herramientas de documentación de APIs y análisis de calidad de código, incluyendo APIDOC y SonarQube."
+          - "Profesional J | Abril 2021 – Marzo 2022"
+          - "Desarrollo e implementación de funcionalidades del Sistema Integrado de la Administración Tributaria (SIAT en línea), en el módulo de Declaraciones Juradas."
+          - "Diseño y desarrollo de servicios backend y APIs REST con .NET Core."
+          - "Implementación de mecanismos de gestión de secretos con Vault e integración de registros y trazabilidad mediante ELK Stack."
+          - "Desarrollo de interfaces web con Razor Pages y creación de librerías reutilizables para Java y .NET Core."
+          - "Consultor Individual de Línea – Consultor I | Junio 2020 – Diciembre 2020"
+          - "Desarrollo y pruebas de funcionalidades del sistema de facturación electrónica virtual."
+          - "Implementación de servicios backend REST/SOAP e interfaces frontend con JSF y Angular."
+          - "Desarrollo de aplicaciones de escritorio con JavaFX."
+          - "Consultor Individual de Línea – Consultor J | Febrero 2020 – Junio 2020"
+          - "Desarrollo full stack de funcionalidades del sistema de facturación electrónica SIAT."
+          - "Implementación de servicios web REST/SOAP, aplicaciones de escritorio con JavaFX e interfaces con JSF y Angular."
+          - "Técnico I – Desarrollador Java | Marzo 2019 – Diciembre 2019"
+          - "Análisis, desarrollo y pruebas de sistemas de información del nuevo sistema integrado del SIN."
+          - "Participación en los módulos de Estados Financieros, Facturación Electrónica, Hoteles y Agentes de Información."
 
   # EDUCACIÓN
   - title: Educación
@@ -83,206 +65,186 @@ sections:
         location: "Bolivia"
         dates: "Febrero 2022 – Julio 2022"
         bullets:
-          - "Formación en pedagogía y educación superior"
+          - "Formación en pedagogía, planificación académica y educación superior."
 
       - title: "Diplomado en Desarrollo de Aplicaciones con Software Libre"
-        sub: "Escuela de Gestión Pública Plurinacional (EGGP)"
+        sub: "Escuela de Gestión Pública Plurinacional (EGPP)"
         location: "Bolivia"
         dates: "Agosto 2019 – Diciembre 2019"
-        nivel: "Diplomado - postgrado"
+        nivel: "Diplomado - Postgrado"
         bullets:
-          - "Desarrollo con tecnologías de software libre"
+          - "Formación en desarrollo de aplicaciones y tecnologías de software libre."
 
       - title: "Ingeniería de Sistemas"
         sub: "Facultad Nacional de Ingeniería"
         location: "Universidad Técnica de Oruro"
         dates: "Enero 2005 – Julio 2012"
-        nivel: "Licenciatura - pregrado"
+        nivel: "Licenciatura - Pregrado"
 
-  # CERTIFICACIONES - ENFOCADAS EN ANGULAR Y DESARROLLO (ORDENADAS POR FECHA)
+  # CERTIFICACIONES Y FORMACIÓN COMPLEMENTARIA
   - title: Certificaciones y Cursos
     entries:
-      - title: "Curso de Git, Gitlab, Gitlab CI/CD"
+      - title: "Curso de Git, GitLab y GitLab CI/CD"
         sub: "IQuattro"
         horas: "30"
         dates: "4 al 15 de noviembre de 2024"
-        bullets:
-          - "Curso de 30 horas"
 
       - title: "Curso de Docker y Kubernetes"
         sub: "IQuattro"
         horas: "25"
         dates: "21 al 31 de octubre de 2024"
-        bullets:
-          - "Curso de 25 horas"
 
       - title: "Taller de Pruebas de Software Manuales y Automatizadas con Postman, Playwright y K6"
         sub: "IQuattro"
         horas: "30"
         dates: "7 al 18 de octubre de 2024"
-        bullets:
-          - "Taller de 30 horas"
 
-      - title: "Curso de Junit, Jmeter, Selenium"
+      - title: "Curso de JUnit, JMeter y Selenium"
         sub: "IQuattro"
         horas: "30"
         dates: "7 al 18 de octubre de 2024"
-        bullets:
-          - "Curso de 30 horas"
 
       - title: "Curso de ISTQB Certified Tester"
         sub: "IQuattro"
         horas: "20"
         dates: "23 de septiembre al 3 de octubre de 2024"
-        bullets:
-          - "Curso de 20 horas"
 
       - title: "Curso de Desarrollo de Aplicaciones Móviles sobre Software Libre"
         sub: "IQuattro"
         horas: "25"
         dates: "9 al 19 de septiembre de 2024"
-        bullets:
-          - "Curso de 25 horas"
 
       - title: "Curso de Spring Boot Avanzado"
         sub: "IQuattro"
         horas: "24"
         dates: "28 de agosto al 6 de septiembre de 2024"
-        bullets:
-          - "Curso de 24 horas"
 
       - title: "Curso de Angular Avanzado"
         sub: "IQuattro"
         horas: "20"
         dates: "19 al 27 de agosto de 2024"
-        bullets:
-          - "Curso de 20 horas"
 
       - title: "Curso de NestJS"
         sub: "IQuattro"
         horas: "20"
         dates: "7 al 15 de agosto de 2024"
-        bullets:
-          - "Curso de 20 horas"
 
-      - title: "Curso de Arquitectura"
+      - title: "Curso de Arquitectura de Software"
         sub: "IQuattro"
         horas: "15"
         dates: "29 de julio al 2 de agosto de 2024"
-        bullets:
-          - "Curso de 15 horas"
+
+      - title: "Curso de Java Avanzado"
+        sub: "IQuattro"
+        horas: "30"
+        dates: "28 de noviembre al 8 de diciembre de 2022"
+
+      - title: "Curso de Programación en Java 11 Avanzado"
+        sub: "IQuattro"
+        horas: "20"
+        dates: "1 al 11 de noviembre de 2022"
+
+      - title: "Prevención de la Violencia"
+        sub: "EGPP"
+        horas: "50"
+        dates: "9 al 22 de agosto de 2021"
 
       - title: "Responsabilidad por la Función Pública"
         sub: "CENCAP"
         horas: "10"
         dates: "10 al 18 de abril de 2023"
-        bullets:
-          - "Curso de 10 horas"
+
+      - title: "Ley N.º 1178"
+        sub: "CENCAP"
+        horas: "10"
+        dates: "27 de febrero al 7 de marzo de 2023"
 
       - title: "Políticas Públicas"
         sub: "CENCAP"
         horas: "10"
         dates: "6 al 14 de febrero de 2023"
-        bullets:
-          - "Curso de 10 horas"
 
-      - title: "Ley N° 1178"
-        sub: "CENCAP"
-        horas: "10"
-        dates: "27 de febrero al 7 de marzo de 2023"
-        bullets:
-          - "Curso de 10 horas"
-
-      - title: "Prevención de la Violencia"
-        sub: "EGGP"
-        horas: "50"
-        dates: "9 al 22 de agosto de 2021"
-        bullets:
-          - "Curso de 50 horas"
-
-      - title: "Java Avanzado"
-        sub: "IQuattro"
-        horas: "30"
-        dates: "28 de noviembre al 8 de diciembre de 2022"
-        bullets:
-          - "Curso de 30 horas"
-
-      - title: "Programación en Java 11 Avanzado"
-        sub: "IQuattro"
-        horas: "20"
-        dates: "1 al 11 de noviembre de 2022"
-        bullets:
-          - "Curso de 20 horas"
-
-  # SKILLS TÉCNICOS - ENFOCADAS EN DESARROLLO
+  # COMPETENCIAS TÉCNICAS
   - title: Competencias Técnicas
     entries:
-      - title: "Frameworks Frontend"
-        bullets:
-          - "Angular"
-          - "TypeScript"
-          - "JSF"
-          - "Razor Pages (.NET)"
-          - "JavaFX (aplicaciones de escritorio)"
-          - "HTML5, CSS3, JavaScript"
-          - "StreamLit"
-          - "Flutter"
-
       - title: "Lenguajes de Programación"
         bullets:
-          - "Java (JDK 11-21)"
-          - "C# / .NET Core (5-7)"
-          - "Go"
+          - "Java (JDK 11, 17, 21)"
+          - "C# / .NET"
+          - "JavaScript / TypeScript"
           - "Python"
-          - "JavaScript, TypeScript"
+          - "Go"
 
-      - title: "Frameworks y Tecnologías Backend"
+      - title: "Backend y Frameworks"
         bullets:
-          - "Spring Boot, Quarkus, Javalin, Spark"
-          - ".NET Core / .NET 6+"
-          - "Sql2o, Dapper"
-          - "Hibernate, Entity Framework"
-          - "Node.js (API development)"
+          - "Spring Boot"
+          - "Quarkus"
+          - "NestJS / Node.js"
+          - "Javalin / Spark"
+          - ".NET Core / .NET"
+          - "Hibernate / Entity Framework"
+          - "Sql2o / Dapper"
 
-      - title: "Bases de Datos"
+      - title: "Frontend y Aplicaciones"
+        bullets:
+          - "Angular"
+          - "HTML5 / CSS3"
+          - "JSF"
+          - "Razor Pages"
+          - "JavaFX"
+          - "Flutter"
+          - "Streamlit"
+
+      - title: "Arquitectura e Integración"
+        bullets:
+          - "Arquitectura de microservicios"
+          - "Arquitectura Onion"
+          - "APIs REST / Servicios SOAP"
+          - "Patrones de diseño"
+          - "Integración de sistemas"
+          - "Autenticación y autorización con OAuth2 / OpenID Connect"
+
+      - title: "Bases de Datos y Almacenamiento"
         bullets:
           - "PostgreSQL"
-          - "MongoDB"
+          - "MongoDB / GridFS"
           - "Oracle"
+          - "Redis"
 
-      - title: "APIs y Servicios Web"
+      - title: "DevOps e Infraestructura"
         bullets:
-          - "REST APIs"
-          - "SOAP Services"
-          - "NestJS (framework Node.js)"
-
-      - title: "Testing y Calidad"
-        bullets:
-          - "SonarQube (calidad de código)"
-          - "JMeter (testing de rendimiento)"
-          - "Testing de aplicaciones web"
-
-      - title: "DevOps y Herramientas"
-        bullets:
+          - "Docker / Kubernetes"
+          - "Git / GitLab"
           - "GitLab CI/CD"
-          - "Git, GitLab"
-          - "Docker"
-          - "Vault (gestión de secretos)"
-          - "ELK Stack (logs y monitoreo)"
+          - "Argo CD"
+          - "HashiCorp Vault"
+          - "Nexus Repository"
+          - "MinIO"
 
-      - title: "Seguridad"
+      - title: "Observabilidad y Calidad"
         bullets:
-          - "Keycloak (OAuth2 / OpenID Connect)"
-          - "Autenticación y autorización"
+          - "ELK Stack"
+          - "Prometheus / Grafana"
+          - "SonarQube"
+          - "JUnit"
+          - "JMeter"
+          - "Selenium / Playwright"
+          - "Postman / K6"
 
-      - title: "Inteligencia Artificial"
+      - title: "Seguridad e Identidad"
         bullets:
-          - "Orquestador de Agentes y Herder"
-          - "Agentes CLI: Claudecode, Opencode, Grok, Debin, Cline, Gemini CLI, Amp"
-          - "WorkFlow con Agentes con CrewAI y LangChain"
-          - "Agentes personales: OpenClaw y Hermes"
-          - "Modelos LLM: Gemini, Qwen, Grok, GPT, Mistral, DeepSeek, Mimo, Aider"
-          - "Plataformas: OpenRouter, llama.cpp"
+          - "Keycloak"
+          - "OAuth2 / OpenID Connect"
+          - "Gestión de secretos con Vault"
+          - "Autenticación y autorización de servicios"
+
+      - title: "Inteligencia Artificial Aplicada al Desarrollo"
+        bullets:
+          - "Desarrollo asistido mediante agentes de inteligencia artificial."
+          - "Herramientas CLI: Claude Code, OpenCode, Gemini CLI, Cline, Amp y Devin."
+          - "Orquestación de agentes y flujos de trabajo con CrewAI y LangChain."
+          - "Uso de modelos LLM: GPT, Gemini, Qwen, DeepSeek, Mistral y Grok."
+          - "Ejecución e integración de modelos mediante llama.cpp y OpenRouter."
 
   # IDIOMAS
   - title: Idiomas
@@ -293,21 +255,18 @@ sections:
 
       - title: "Inglés"
         bullets:
-          - "Profesional / Técnico (B2)"
-          - "Lectura de documentación técnica"
-          - "Comunicación en entornos de trabajo"
+          - "Nivel básico."
+          - "Lectura de documentación técnica con apoyo de herramientas de traducción."
 
   # REFERENCIAS PROFESIONALES
   - title: Referencias Profesionales
     entries:
       - title: "Ramiro Mercado"
         sub: "Aduana Nacional"
-        dates: "72045373"
         bullets:
-          - "Contacto disponible para referencias"
+          - "Datos de contacto disponibles a solicitud."
 
       - title: "Fernando Yañez"
         sub: "Servicio de Impuestos Nacionales"
-        dates: "72590163"
         bullets:
-          - "Contacto disponible para referencias"
+          - "Datos de contacto disponibles a solicitud."

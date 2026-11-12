@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        files: '\.(ts|tsx|astro|css|json|md)$'
+      - id: end-of-file-fixer
+        files: '\.(ts|tsx|astro|css|json|md)$'
+      - id: check-merge-conflict
+      - id: debug-logger
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.41.0
+    hooks:
+      - id: markdownlint
+        args: ['--config', '.markdownlint.json']
+        files: '\.(md|markdown)$'
+
+  - repo: local
+    hooks:
+      - id: astro-check
+        name: Astro TypeScript Check
+        entry: npx astro check
+        language: system
+        types: [typescript]
+        pass_filenames: false
+        always_run: true

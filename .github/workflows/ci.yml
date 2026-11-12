@@ -1,0 +1,109 @@
+name: CI/CD - CV Plantilla
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  validate:
+    name: Validate YAML & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+          cache-version: 0
+
+      - name: Validate base YAML
+        run: |
+          echo "🔍 Validando cv_base.yml..."
+          ruby -ryaml -e "YAML.load_file('_data/cv_base.yml')"
+          echo "✓ cv_base.yml válido"
+
+      - name: Validate all overlay YAMLs
+        run: |
+          for overlay in _data/*_overlay.yml; do
+            echo "🔍 Validando $overlay..."
+            ruby -ryaml -e "YAML.load_file('$overlay')"
+            echo "✓ $overlay válido"
+          done
+
+      - name: Test merge all versions
+        run: |
+          for version in fullstack arquitectura angular_backend institucion_publica; do
+            echo "🔄 Generando versión: $version"
+            ruby merge_cv.rb "$version"
+            echo "✓ $version generado"
+            # Validar output
+            ruby -ryaml -e "YAML.load_file('_data/cv.yml')"
+            echo "✓ cv.yml válido para $version"
+          done
+
+      - name: Build Jekyll site (test build)
+        run: |
+          bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+
+      - name: HTML Lint (optional)
+        run: |
+          # Verificar que el HTML generado no tenga errores básicos
+          if command -v htmlhint &> /dev/null; then
+            htmlhint _site/**/*.html || true
+          else
+            echo "htmlhint no instalado, saltando..."
+          fi
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: validate
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+          cache-version: 0
+
+      - name: Generate default CV (fullstack)
+        run: |
+          ruby merge_cv.rb fullstack
+
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

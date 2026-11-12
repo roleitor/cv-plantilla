@@ -1,0 +1,61 @@
+<!-- ==========================================================================
+     Sidebar Sections - Two Column Layout
+     Renderiza sidebar dinámicamente desde site.data.cv.sections
+     ========================================================================== -->
+
+{% comment %} Foto y nombre en sidebar {% endcomment %}
+<img src="/images/profile.jpg" alt="{{ site.title }}" class="sidebar-photo">
+<h2 class="sidebar-name">{{ site.title }}</h2>
+<p class="sidebar-title">{{ site.department }}</p>
+<p class="sidebar-title" style="font-size: 0.85rem; opacity: 0.8;">{{ site.affiliation }}</p>
+
+{% comment %} Contacto en sidebar {% endcomment %}
+<div class="sidebar-section">
+  <h3>Contacto</h3>
+  <div class="sidebar-contact">
+    <a href="mailto:{{ site.email }}">📧 {{ site.email }}</a>
+    <a href="tel:{{ site.phone }}">📞 {{ site.phone }}</a>
+    <a href="https://linkedin.com/in/{{ site.linkedin }}">💼 LinkedIn</a>
+    <a href="https://github.com/{{ site.github }}">🐙 GitHub</a>
+  </div>
+</div>
+
+{% comment %} Competencias en sidebar (grid) {% endcomment %}
+<div class="sidebar-section">
+  <h3>Competencias</h3>
+  <div class="sidebar-skills-grid">
+    {% for section in site.data.cv.sections %}
+    {% if section.title contains "Competencias" %}
+    {% for entry in section.entries %}
+    <div class="skill-category">
+      <h4>{{ entry.title }}</h4>
+      <ul>
+        {% for bullet in entry.bullets %}
+        <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% comment %} Idiomas en sidebar {% endcomment %}
+<div class="sidebar-section">
+  <h3>Idiomas</h3>
+  {% for section in site.data.cv.sections %}
+  {% if section.title contains "Idiomas" %}
+  {% for entry in section.entries %}
+  <div class="skill-category">
+    <h4>{{ entry.title }}</h4>
+    <ul>
+      {% for bullet in entry.bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+</div>

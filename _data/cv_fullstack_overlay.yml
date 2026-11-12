@@ -1,0 +1,22 @@
+# Overlay para versión Full Stack
+# Solo contiene diferencias respecto a cv_base.yml
+# Se mergea: base + overlay = cv_fullstack.yml final
+
+sections:
+  # Perfil: mismo que base (no se sobrescribe)
+
+  # Experiencia: misma que base (no se sobrescribe)
+
+  # Educación: misma que base (no se sobrescribe)
+
+  # Skills: agregar StreamLit y Flutter al frontend (ya están en base)
+
+  # Certificaciones: TODAS (ya están en base)
+
+  # Soft Skills: mismas que base
+
+  # Referencias: mismas que base
+
+  # Agregar sección extra si se desea
+  # - title: Proyectos Destacados
+  #   entries: ...

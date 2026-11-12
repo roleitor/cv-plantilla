@@ -1,0 +1,30 @@
+---
+// ============================================================================
+// SkillsGrid Component - Astro (Timeline Layout)
+// ============================================================================
+
+import type { CVData } from '../types/cv';
+
+interface Props {
+  cvData: CVData;
+}
+
+const { cvData } = Astro.props;
+---
+
+<section class="timeline-section">
+  <h2>Competencias Técnicas</h2>
+  <div class="skills-grid">
+    {cvData.sections
+      .filter(s => s.title.toLowerCase().includes('competencias'))
+      .flatMap(s => s.entries)
+      .map(entry => (
+        <div class="skill-category">
+          <h4>{entry.title}</h4>
+          <ul>
+            {entry.bullets?.map(bullet => <li>{bullet}</li>)}
+          </ul>
+        </div>
+      ))}
+  </div>
+</section>

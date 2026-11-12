@@ -1,0 +1,52 @@
+# .pre-commit-config.yaml
+# Configuración de pre-commit hooks para validación local
+# Instalar: pip install pre-commit && pre-commit install
+
+repos:
+  # Validación YAML
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args: ['-d', '{extends: relaxed, rules: {line-length: disable}}']
+        files: '_data/.*\.yml$'
+
+  # Validación Markdown
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.41.0
+    hooks:
+      - id: markdownlint
+        args: ['--config', '.markdownlint.json']
+        files: '\.(md|markdown)$'
+
+  # Validación general (trailing whitespace, EOF, etc.)
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        files: '\.(yml|yaml|md|html|css|js|rb)$'
+      - id: end-of-file-fixer
+        files: '\.(yml|yaml|md|html|css|js|rb)$'
+      - id: check-yaml
+        files: '\.(yml|yaml)$'
+      - id: check-merge-conflict
+      - id: debug-logger
+
+  # Ruby syntax check (si hay archivos .rb)
+  - repo: local
+    hooks:
+      - id: ruby-syntax
+        name: Ruby syntax check
+        entry: ruby -c
+        language: system
+        types: [ruby]
+        verbose: true
+
+      - id: merge-cv-test
+        name: Test merge_cv.rb all versions
+        entry: ruby merge_cv.rb
+        language: system
+        args: ['fullstack']
+        pass_filenames: false
+        always_run: true
+        verbose: true

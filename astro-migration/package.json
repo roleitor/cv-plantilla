@@ -10,6 +10,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "lint": "eslint src",
+    "verify": "npm run build && node scripts/verify-templates.mjs",
     "format": "prettier --write src/"
   },
   "dependencies": {

@@ -42,7 +42,10 @@ export interface SiteConfig {
   cv_version: string;
 }
 
-// Temas disponibles
+// Temas disponibles.
+// La paleta de cada tema vive ÚNICAMENTE en `src/styles/global.css`
+// (bloques `[data-theme="..."]`). Aquí solo se declaran los nombres, para
+// poder tiparlos y generar el selector sin duplicar los colores.
 export type ThemeName =
   | 'blue'
   | 'green'
@@ -51,164 +54,22 @@ export type ThemeName =
   | 'gray'
   | 'dark'
   | 'modern'
-  | 'classic';
+  | 'classic'
+  | 'navy'
+  | 'monochrome';
 
-export interface ThemeConfig {
-  primary: string;
-  secondary: string;
-  accent: string;
-  text: string;
-  lightText: string;
-  bg: string;
-  sectionBg: string;
-  borderColor: string;
-  headerRadius: string;
-  sectionRadius: string;
-  printBg: string;
-  printText: string;
-  printBorder: string;
-  sidebarBg: string;
-  sidebarText: string;
-}
-
-export const THEMES: Record<ThemeName, ThemeConfig> = {
-  blue: {
-    primary: '#2563eb',
-    secondary: '#1e40af',
-    accent: '#3b82f6',
-    text: '#1f2937',
-    lightText: '#6b7280',
-    bg: '#ffffff',
-    sectionBg: '#f9fafb',
-    borderColor: '#e5e7eb',
-    headerRadius: '0.5rem',
-    sectionRadius: '0.5rem',
-    printBg: 'white',
-    printText: 'black',
-    printBorder: '#2563eb',
-    sidebarBg: '#1f2937',
-    sidebarText: '#f9fafb',
-  },
-  green: {
-    primary: '#059669',
-    secondary: '#047857',
-    accent: '#10b981',
-    text: '#1f2937',
-    lightText: '#6b7280',
-    bg: '#ffffff',
-    sectionBg: '#f0fdf4',
-    borderColor: '#bbf7d0',
-    headerRadius: '0.5rem',
-    sectionRadius: '0.5rem',
-    printBg: 'white',
-    printText: 'black',
-    printBorder: '#059669',
-    sidebarBg: '#1f2937',
-    sidebarText: '#f9fafb',
-  },
-  red: {
-    primary: '#dc2626',
-    secondary: '#b91c1c',
-    accent: '#ef4444',
-    text: '#1f2937',
-    lightText: '#6b7280',
-    bg: '#ffffff',
-    sectionBg: '#fef2f2',
-    borderColor: '#fecaca',
-    headerRadius: '0.5rem',
-    sectionRadius: '0.5rem',
-    printBg: 'white',
-    printText: 'black',
-    printBorder: '#dc2626',
-    sidebarBg: '#1f2937',
-    sidebarText: '#f9fafb',
-  },
-  purple: {
-    primary: '#7c3aed',
-    secondary: '#6d28d9',
-    accent: '#8b5cf6',
-    text: '#1f2937',
-    lightText: '#6b7280',
-    bg: '#ffffff',
-    sectionBg: '#faf5ff',
-    borderColor: '#e9d5ff',
-    headerRadius: '0.5rem',
-    sectionRadius: '0.5rem',
-    printBg: 'white',
-    printText: 'black',
-    printBorder: '#7c3aed',
-    sidebarBg: '#1f2937',
-    sidebarText: '#f9fafb',
-  },
-  gray: {
-    primary: '#374151',
-    secondary: '#1f2937',
-    accent: '#4b5563',
-    text: '#1f2937',
-    lightText: '#6b7280',
-    bg: '#ffffff',
-    sectionBg: '#f3f4f6',
-    borderColor: '#d1d5db',
-    headerRadius: '0.5rem',
-    sectionRadius: '0.5rem',
-    printBg: 'white',
-    printText: 'black',
-    printBorder: '#374151',
-    sidebarBg: '#1f2937',
-    sidebarText: '#f9fafb',
-  },
-  dark: {
-    primary: '#3b82f6',
-    secondary: '#2563eb',
-    accent: '#60a5fa',
-    text: '#f9fafb',
-    lightText: '#9ca3af',
-    bg: '#111827',
-    sectionBg: '#1f2937',
-    borderColor: '#374151',
-    headerRadius: '0.5rem',
-    sectionRadius: '0.5rem',
-    printBg: 'white',
-    printText: 'black',
-    printBorder: '#3b82f6',
-    sidebarBg: '#1f2937',
-    sidebarText: '#f9fafb',
-  },
-  modern: {
-    primary: '#0891b2',
-    secondary: '#0e7490',
-    accent: '#06b6d4',
-    text: '#1f2937',
-    lightText: '#6b7280',
-    bg: '#ffffff',
-    sectionBg: '#ecfeff',
-    borderColor: '#a5f3fc',
-    headerRadius: '1rem',
-    sectionRadius: '1rem',
-    printBg: 'white',
-    printText: 'black',
-    printBorder: '#0891b2',
-    sidebarBg: '#1f2937',
-    sidebarText: '#f9fafb',
-  },
-  classic: {
-    primary: '#1e3a8a',
-    secondary: '#1e40af',
-    accent: '#3b82f6',
-    text: '#1f2937',
-    lightText: '#6b7280',
-    bg: '#ffffff',
-    sectionBg: '#ffffff',
-    borderColor: '#94a3b8',
-    headerRadius: '0',
-    sectionRadius: '0',
-    printBg: 'white',
-    printText: 'black',
-    printBorder: '#1e3a8a',
-    sidebarBg: '#1f2937',
-    sidebarText: '#f9fafb',
-  },
-};
+export const THEME_NAMES: ThemeName[] = [
+  'blue',
+  'green',
+  'red',
+  'purple',
+  'gray',
+  'dark',
+  'modern',
+  'classic',
+  'navy',
+  'monochrome',
+];
 
 // Fuentes disponibles
 export type FontName = 'inter' | 'roboto' | 'opensans' | 'lato' | 'montserrat';

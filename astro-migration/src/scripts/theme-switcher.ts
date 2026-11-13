@@ -5,7 +5,7 @@
 
 import type { ThemeName, FontName, FontSize, LayoutName, UserPreferences } from '../types/cv';
 import {
-  THEMES,
+  THEME_NAMES,
   FONTS,
   LAYOUT_LABELS,
   LAYOUT_ROUTES,
@@ -16,29 +16,6 @@ import { withBase } from '../utils/url';
 
 // Re-export types for convenience
 export type { ThemeName, FontName, FontSize, LayoutName, UserPreferences };
-
-/**
- * Mapa de las claves de configuración del tema a los nombres reales de las
- * custom properties CSS definidas en `src/styles/global.css`.
- * Sin este mapeo Astro escribiría `--primary` en lugar de `--primary-color`.
- */
-const CSS_VAR_MAP: Record<string, string> = {
-  primary: '--primary-color',
-  secondary: '--secondary-color',
-  accent: '--accent-color',
-  text: '--text-color',
-  lightText: '--light-text',
-  bg: '--bg-color',
-  sectionBg: '--section-bg',
-  borderColor: '--border-color',
-  headerRadius: '--header-radius',
-  sectionRadius: '--section-radius',
-  printBg: '--print-bg',
-  printText: '--print-text',
-  printBorder: '--print-border',
-  sidebarBg: '--sidebar-bg',
-  sidebarText: '--sidebar-text',
-};
 
 const STORAGE_KEYS = {
   theme: 'cv_theme',
@@ -100,24 +77,16 @@ export class ThemeSwitcher {
   // --------------------------------------------------------------------------
   private applyPreferences(): void {
     const root = document.documentElement;
-    const theme = THEMES[this.preferences.theme] || THEMES.blue;
 
-    // Aplicar variables CSS del tema usando el mapeo de nombres reales
-    Object.entries(theme).forEach(([key, value]) => {
-      const cssVar = CSS_VAR_MAP[key];
-      if (cssVar) {
-        root.style.setProperty(cssVar, value);
-      }
-    });
+    // El color vive solo en el CSS: se cambia el atributo y el bloque
+    // [data-theme="..."] aplica las custom properties.
+    root.setAttribute('data-theme', this.preferences.theme);
 
     // Aplicar fuente
     root.style.setProperty('--base-font-family', FONTS[this.preferences.font] || FONTS.inter);
 
     // Aplicar tamaño
     root.style.setProperty('--base-font-size', this.preferences.size + 'px');
-
-    // Atributo data-theme para CSS
-    root.setAttribute('data-theme', this.preferences.theme);
 
     // Actualizar selects si existen
     this.updateSelectors();
@@ -175,7 +144,7 @@ export class ThemeSwitcher {
   // Setters públicos
   // --------------------------------------------------------------------------
   setTheme(theme: ThemeName): void {
-    if (THEMES[theme]) {
+    if (THEME_NAMES.includes(theme)) {
       this.preferences.theme = theme;
       this.savePreferences();
       this.applyPreferences();
@@ -218,8 +187,11 @@ export class ThemeSwitcher {
     return { ...this.preferences };
   }
 
-  getThemeConfig(theme?: ThemeName) {
-    return THEMES[theme || this.preferences.theme];
+  /**
+   * Nombre del tema activo. La paleta vive en el CSS.
+   */
+  getTheme(): ThemeName {
+    return this.preferences.theme;
   }
 
   // --------------------------------------------------------------------------
@@ -246,7 +218,7 @@ export class ThemeSwitcher {
       .map(([value, label]) => `<option value="${value}" ${value === activeLayout ? 'selected' : ''}>${label}</option>`)
       .join('');
 
-    const themeOptions = Object.keys(THEMES)
+    const themeOptions = THEME_NAMES
       .map(key => `<option value="${key}" ${key === p.theme ? 'selected' : ''}>${key.charAt(0).toUpperCase() + key.slice(1)}</option>`)
       .join('');
 

@@ -1133,7 +1133,124 @@ body {
 /* --------------------------------------------------------------------------
    Print Styles
    -------------------------------------------------------------------------- */
+/* Tamaño de página y márgenes del PDF (A4) */
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
 @media print {
+  /* ---- Tipografía y escala -------------------------------------------
+     Los tamaños del CV están en rem, y rem escala con el font-size de
+     <html>. El JS inyecta --base-font-size inline, así que hay que
+     forzarlo con !important (un !important de stylesheet gana a un
+     estilo inline normal). Sin esto el CV se imprime a 18px y salen
+     25 páginas. */
+  html {
+    font-size: 10.5pt !important;
+    --base-font-size: 10.5pt !important;
+  }
+
+  body {
+    line-height: 1.45 !important;
+    color: #000 !important;
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  /* Sin animaciones: en impresión solo ralentizan el render */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* ---- Saltos de página ----------------------------------------------
+     Regla clave: una SECCIÓN puede partirse entre páginas (si no,
+     cada sección empuja a la siguiente y el CV se llena de huecos). */
+  .cv-section,
+  .layout-two-column .main-section,
+  .layout-timeline .timeline-section {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Una entrada SÍ puede partirse: si no, un puesto con 5 viñetas que no
+     cabe al final de la página empuja el bloque entero y deja media
+     página en blanco. Se controla con orphans/widows y con no separar
+     el título de su primera viñeta. */
+  .cv-entry,
+  .layout-two-column .entry,
+  .layout-timeline .timeline-item,
+  .cv-formal-entry {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .cv-entry-header,
+  .entry-header,
+  .cv-entry-main {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Un título nunca debe quedar huérfano al pie de una página */
+  h1, h2, h3, .cv-section-title, .main-section h2, .timeline-section h2 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* ---- Densidad ------------------------------------------------------
+     El diseño de pantalla usa espaciados generosos en rem (padding de
+     1.5rem por entrada, 0.75rem por viñeta). Esos valores se heredan
+     tal cual al imprimir y son la causa de que el CV ocupe 13 páginas.
+     Aquí se ajustan a valores de documento. */
+  .cv-entry {
+    margin-bottom: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+  }
+
+  .cv-entry-institution {
+    font-size: 1rem !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .cv-entry-degree {
+    font-size: 0.92rem !important;
+  }
+
+  .cv-entry-location,
+  .cv-entry-dates,
+  .cv-entry-meta {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .cv-entry-bullets {
+    margin-top: 0.25rem !important;
+  }
+
+  .cv-entry-bullets li {
+    font-size: 0.92rem !important;
+    margin-bottom: 0.15rem !important;
+    padding-left: 1.1rem !important;
+  }
+
+  .cv-entry-header {
+    margin-bottom: 0.1rem !important;
+  }
+
+  /* ---- Cabecera ------------------------------------------------------ */
   .cv-header,
   .layout-classic .cv-header,
   .layout-two-column .main-header,
@@ -1142,7 +1259,9 @@ body {
     color: var(--print-text) !important;
     box-shadow: none !important;
     border: 2px solid var(--print-border) !important;
-    padding: 2rem !important;
+    padding: 1rem !important;
+    border-radius: 0 !important;
+    margin-bottom: 0.8rem !important;
   }
 
   .cv-profile-photo,
@@ -1150,6 +1269,8 @@ body {
   .header-photo {
     border-color: var(--print-border) !important;
     box-shadow: none !important;
+    width: 64px !important;
+    height: 64px !important;
   }
 
   .cv-name,
@@ -1167,6 +1288,11 @@ body {
     color: var(--print-text) !important;
   }
 
+  .cv-name {
+    font-size: 1.5rem !important;
+  }
+
+  /* ---- Secciones ----------------------------------------------------- */
   .cv-section,
   .layout-two-column .main-section,
   .layout-timeline .timeline-section {
@@ -1174,14 +1300,45 @@ body {
     box-shadow: none !important;
     border-left: none !important;
     border-bottom: 2px solid var(--print-border) !important;
-    page-break-inside: avoid;
+    padding: 0 0 0.8rem !important;
+    margin-bottom: 0.8rem !important;
+    border-radius: 0 !important;
+  }
+
+  .cv-section-title,
+  .layout-two-column .main-section h2,
+  .layout-timeline .timeline-section h2 {
+    color: black !important;
+    border-bottom-color: var(--print-border) !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.2rem !important;
+  }
+
+  /* ---- Dos columnas: el grid se mantiene en impresión ---------------- */
+  .layout-two-column .cv-container,
+  .layout-ejecutivo .cv-container {
+    display: grid !important;
+    grid-template-columns: 32% 1fr !important;
+    gap: 6mm !important;
+    max-width: none !important;
+    padding: 0 !important;
   }
 
   .layout-two-column .cv-sidebar {
     background: white !important;
     color: black !important;
-    border: 2px solid var(--print-border) !important;
-    page-break-after: always;
+    border: 1px solid var(--print-border) !important;
+    /* Antes esto forzaba una página solo para la barra lateral */
+    page-break-after: auto !important;
+    break-after: auto !important;
+    padding: 0.6rem !important;
+  }
+
+  .layout-two-column .cv-main,
+  .layout-ejecutivo .cv-main {
+    page-break-before: auto !important;
+    break-before: auto !important;
   }
 
   .layout-two-column .sidebar-photo {
@@ -1214,13 +1371,7 @@ body {
     color: black !important;
   }
 
-  .cv-section-title,
-  .layout-two-column .main-section h2,
-  .layout-timeline .timeline-section h2 {
-    color: black !important;
-    border-bottom-color: var(--print-border) !important;
-  }
-
+  /* ---- Línea de tiempo ------------------------------------------------ */
   .layout-timeline .timeline::before {
     background: black !important;
   }
@@ -1231,6 +1382,7 @@ body {
     border-color: white !important;
   }
 
+  /* ---- Viñetas -------------------------------------------------------- */
   .cv-entry-bullets li::before,
   .layout-two-column .entry li::before,
   .layout-timeline .timeline-item li::before {
@@ -1254,8 +1406,11 @@ body {
     color: black !important;
   }
 
+  /* ---- Controles de la interfaz --------------------------------------- */
   .theme-selector,
   .print-btn,
+  .cv-toolbar,
+  .cv-toolbar--floating,
   .layout-two-column .theme-selector,
   .layout-two-column .print-btn,
   .layout-timeline .theme-selector,
@@ -1275,31 +1430,10 @@ body {
     color: black !important;
   }
 
-  .layout-two-column .cv-container {
-    display: block !important;
-  }
-
-  .layout-two-column .cv-main {
-    page-break-before: always;
-  }
-
-  body {
-    max-width: none !important;
-    padding: 0 !important;
-    font-size: 12pt !important;
-  }
-
   .cv-container,
   .layout-timeline .cv-container {
     max-width: none !important;
     padding: 0 !important;
-  }
-
-  /* Evitar cortes en entradas */
-  .cv-entry,
-  .layout-two-column .entry,
-  .layout-timeline .timeline-item {
-    page-break-inside: avoid;
   }
 }
 
